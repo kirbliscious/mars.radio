@@ -240,13 +240,16 @@ html {
     align-items: center; }
   #Splash .splash_intro {
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    height: 500px; }
+    min-height: 500px; }
+    @media (max-width: 1023px) {
+      #Splash .splash_intro {
+        padding: 40px; } }
     #Splash .splash_intro p {
+      font-size: 32px;
+      line-height: 42px;
       text-align: center; }
       @media (min-width: 1024px) {
         #Splash .splash_intro p {
-          font-size: 24px;
-          line-height: 32px;
           max-width: 800px; } }
   #Splash .splash_video {
     padding: 40px 0;
@@ -339,7 +342,8 @@ html {
           padding: 20px;
           background-color: #fff; }
         #Splash .threeup ul li p {
-          font-size: 16px; } }
+          font-size: 20px;
+          line-height: 32px; } }
     @media (min-width: 1024px) {
       #Splash .threeup ul {
         -webkit-flex-direction: row;
