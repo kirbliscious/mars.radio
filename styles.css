@@ -361,6 +361,9 @@ html {
           -moz-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+          #Splash .threeup ul li img {
+            width: 100%;
+            height: auto; }
           #Splash .threeup ul li .text {
             background-color: #fff;
             padding: 20px; } }
