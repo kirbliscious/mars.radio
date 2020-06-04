@@ -266,32 +266,47 @@ html {
     background-image: url("img/aluminum_foil.jpg"); }
   #Splash .splash_explore {
     background-image: url("img/cardboard.jpg"); }
-  #Splash .threeup header h2 {
+  #Splash .threeup header {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    margin-bottom: 2px; }
-    #Splash .threeup header h2 span {
-      font-family: data;
-      background-color: #fff; }
-  #Splash .threeup header .blurb {
-    text-align: justify;
-    line-height: 60px; }
-    #Splash .threeup header .blurb span {
-      background-color: #fff;
-      padding: 15px 0; }
-  @media (max-width: 1023px) {
-    #Splash .threeup header h2 span {
-      padding: 30px 10px 5px; }
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    #Splash .threeup header h2 {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      margin-bottom: 2px; }
+      #Splash .threeup header h2 span {
+        font-family: data;
+        background-color: #fff; }
     #Splash .threeup header .blurb {
-      margin-bottom: 10px; } }
-  @media (min-width: 1024px) {
-    #Splash .threeup header h2 span {
-      padding: 30px 10px 5px; }
-    #Splash .threeup header .blurb {
-      margin-bottom: 20px; } }
+      text-align: justify;
+      line-height: 60px; }
+      #Splash .threeup header .blurb span {
+        background-color: #fff;
+        padding: 15px 0; }
+    @media (max-width: 1023px) {
+      #Splash .threeup header h2 span {
+        padding: 30px 10px 5px; }
+      #Splash .threeup header .blurb {
+        margin-bottom: 10px; } }
+    @media (min-width: 1024px) {
+      #Splash .threeup header h2 span {
+        padding: 30px 10px 5px; }
+      #Splash .threeup header .blurb {
+        margin-bottom: 20px; } }
   #Splash .threeup ul {
     display: -webkit-box;
     display: -moz-box;
@@ -337,14 +352,18 @@ html {
         -moz-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-        #Splash .threeup ul li img {
-          height: 300px; }
-        #Splash .threeup ul li .text {
-          padding: 20px;
-          background-color: #fff; }
-        #Splash .threeup ul li p {
-          font-size: 20px;
-          line-height: 32px; } }
+        #Splash .threeup ul li {
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          #Splash .threeup ul li .text {
+            background-color: #fff;
+            padding: 20px; } }
     @media (min-width: 1024px) {
       #Splash .threeup ul {
         -webkit-flex-direction: row;
