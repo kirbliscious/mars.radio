@@ -366,7 +366,9 @@ html {
             height: auto; }
           #Splash .threeup ul li .text {
             background-color: #fff;
-            padding: 20px; } }
+            padding: 40px; }
+            #Splash .threeup ul li .text h3 {
+              font-size: 36px; } }
     @media (min-width: 1024px) {
       #Splash .threeup ul {
         -webkit-flex-direction: row;
