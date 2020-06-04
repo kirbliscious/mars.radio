@@ -135,7 +135,7 @@ p, li {
 * * * * * * * * * * * *
 ~~~~~~~~~~~~~~~~~~~~~ */
 html {
-  background-image: url("img/mars.jpg"); }
+  background-color: #e54ed0; }
 
 .header {
   display: -webkit-box;
@@ -158,7 +158,10 @@ html {
   -ms-flex-align: center;
   align-items: center;
   height: 100px;
-  background-color: #000; }
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
   .header h1 {
     font-family: data;
     font-size: 50px;
@@ -208,10 +211,12 @@ html {
       padding: 30px 20px 30px; } }
   @media (min-width: 1024px) {
     #Splash section {
-      padding: 20px; } }
+      padding: 80px 20px; } }
   @media (min-width: 1200px) {
     #Splash section {
-      padding: 40px; } }
+      padding: 100px 40px; } }
+  #Splash section header h2 {
+    font-family: data; }
   #Splash .splash_intro,
   #Splash .splash_video,
   #Splash .splash_about,
@@ -242,8 +247,10 @@ html {
     -ms-flex-align: center;
     align-items: center; }
   #Splash .splash_intro {
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    height: 100vh; }
+    background: linear-gradient(124deg, #ef91f7, #FFA251, #F4F18D, #74B6FC, #D177FF);
+    height: 80vh; }
+    #Splash .splash_intro h1 {
+      margin-top: 100px; }
     @media (max-width: 1023px) {
       #Splash .splash_intro {
         padding: 100px 40px; } }
@@ -266,9 +273,17 @@ html {
     #Splash .splash_video p {
       color: #fff; }
   #Splash .splash_learn {
-    background-image: url("img/aluminum_foil.jpg"); }
+    background-image: url("img/aluminum_foil.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #Splash .splash_learn header h2, #Splash .splash_learn header p {
+      color: #e54ed0; }
   #Splash .splash_explore {
-    background-image: url("img/cardboard.jpg"); }
+    background-image: url("img/texture-plasticbag-blue.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #Splash .splash_explore header h2, #Splash .splash_explore header p {
+      color: #71c8f0; }
   #Splash .threeup header {
     display: -webkit-box;
     display: -moz-box;
@@ -293,12 +308,12 @@ html {
       margin-bottom: 2px; }
       #Splash .threeup header h2 span {
         font-family: data;
-        background-color: #fff; }
+        background-color: rgba(0, 0, 0, 0.8); }
     #Splash .threeup header .blurb {
       text-align: center;
       line-height: 59px; }
       #Splash .threeup header .blurb span {
-        background-color: #fff;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 15px 0; }
     @media (max-width: 1023px) {
       #Splash .threeup header h2 span {
@@ -384,12 +399,15 @@ html {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
         #Splash .threeup ul li img {
-          height: 300px; }
+          height: 400px; }
         #Splash .threeup ul li .text p {
           font-size: 20px;
           line-height: 32px; } }
   #Splash .splash_request {
-    padding-top: 100px; }
+    padding-top: 100px;
+    background-image: url("img/texture-bubbles.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
     #Splash .splash_request h2 {
       -webkit-justify-content: center;
       -moz-justify-content: center;
