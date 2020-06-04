@@ -185,27 +185,21 @@ html {
   background-color: white; }
   #Splash h1 {
     text-align: center;
-    max-width: 800px; }
-  #Splash p {
-    font-size: 24px; }
-    @media (min-width: 1024px) {
-      #Splash p {
-        font-size: 20px;
-        line-height: 28px; } }
-    @media (min-width: 1200px) {
-      #Splash p {
-        font-size: 24px;
-        line-height: 32px; } }
-  #Splash section h2 {
+    max-width: 800px;
+    font-size: 50px;
+    line-height: 60px; }
+  #Splash h2 {
     color: #000;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
     font-family: alphaHeadline;
     font-size: 60px;
     text-transform: uppercase; }
+  #Splash p {
+    font-size: 28px;
+    line-height: 40px; }
+    @media (min-width: 1200px) {
+      #Splash p {
+        font-size: 28px;
+        line-height: 36px; } }
   @media (max-width: 1023px) {
     #Splash section {
       padding: 30px 20px 30px; } }
@@ -269,12 +263,18 @@ html {
   #Splash .splash_explore {
     background-image: url("img/cardboard.jpg"); }
   #Splash .threeup header h2 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     margin-bottom: 2px; }
     #Splash .threeup header h2 span {
       font-family: data;
       background-color: #fff; }
   #Splash .threeup header .blurb {
-    text-align: justify; }
+    text-align: justify;
+    line-height: 60px; }
     #Splash .threeup header .blurb span {
       background-color: #fff;
       padding: 15px 0; }
@@ -282,15 +282,11 @@ html {
     #Splash .threeup header h2 span {
       padding: 30px 10px 5px; }
     #Splash .threeup header .blurb {
-      font-size: 20px;
-      line-height: 51px;
       margin-bottom: 10px; } }
   @media (min-width: 1024px) {
     #Splash .threeup header h2 span {
       padding: 30px 10px 5px; }
     #Splash .threeup header .blurb {
-      font-size: 28px;
-      line-height: 60px;
       margin-bottom: 20px; } }
   #Splash .threeup ul {
     display: -webkit-box;
