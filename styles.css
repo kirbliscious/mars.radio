@@ -243,11 +243,12 @@ html {
     min-height: 500px; }
     @media (max-width: 1023px) {
       #Splash .splash_intro {
-        padding: 40px; } }
+        padding: 100px 40px; } }
     #Splash .splash_intro p {
       font-size: 32px;
       line-height: 42px;
-      text-align: center; }
+      text-align: center;
+      margin-top: 40px; }
       @media (min-width: 1024px) {
         #Splash .splash_intro p {
           max-width: 800px; } }
