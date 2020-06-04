@@ -187,15 +187,18 @@ html {
     text-align: center;
     max-width: 800px;
     font-size: 50px;
-    line-height: 60px; }
+    line-height: 60px;
+    max-width: 1200px; }
   #Splash h2 {
     color: #000;
     font-family: alphaHeadline;
     font-size: 60px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    max-width: 1200px; }
   #Splash p {
     font-size: 28px;
-    line-height: 40px; }
+    line-height: 40px;
+    max-width: 1200px; }
     @media (min-width: 1200px) {
       #Splash p {
         font-size: 28px;
@@ -240,7 +243,7 @@ html {
     align-items: center; }
   #Splash .splash_intro {
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    min-height: 500px; }
+    height: 100vh; }
     @media (max-width: 1023px) {
       #Splash .splash_intro {
         padding: 100px 40px; } }
@@ -325,7 +328,8 @@ html {
     -moz-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    -ms-flex-pack: center; }
+    -ms-flex-pack: center;
+    max-width: 1200px; }
     #Splash .threeup ul li {
       display: -webkit-box;
       display: -moz-box;
@@ -339,9 +343,14 @@ html {
       position: relative; }
       #Splash .threeup ul li:not(:last-child) {
         margin-bottom: 20px; }
+      #Splash .threeup ul li .text {
+        background-color: #fff;
+        padding: 40px 20px; }
       #Splash .threeup ul li h3 {
         font-family: alphaHeadlineBold;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-size: 36px;
+        margin-bottom: 30px; }
     @media (max-width: 1023px) {
       #Splash .threeup ul {
         -webkit-flex-direction: column;
@@ -363,67 +372,22 @@ html {
           flex-wrap: wrap; }
           #Splash .threeup ul li img {
             width: 100%;
-            height: auto; }
-          #Splash .threeup ul li .text {
-            background-color: #fff;
-            padding: 40px; }
-            #Splash .threeup ul li .text h3 {
-              font-size: 36px;
-              margin-bottom: 30px; } }
+            height: auto; } }
     @media (min-width: 1024px) {
       #Splash .threeup ul {
-        -webkit-flex-direction: row;
-        -moz-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row; }
-        #Splash .threeup ul li {
-          -webkit-align-items: center;
-          -moz-align-items: center;
-          -ms-align-items: center;
-          -ms-flex-align: center;
-          align-items: center;
-          -webkit-justify-content: center;
-          -moz-justify-content: center;
-          -ms-justify-content: center;
-          justify-content: center;
-          -ms-flex-pack: center; }
-          #Splash .threeup ul li:hover .text p {
-            opacity: 0.90; }
-          #Splash .threeup ul li img {
-            width: 100%;
-            height: 300px;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background-position: center;
-            flex: 1; }
-          #Splash .threeup ul li .text {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            transition: all 500ms; }
-            #Splash .threeup ul li .text h3 {
-              position: absolute;
-              z-index: 50;
-              top: 20px;
-              left: 20px;
-              color: #fff;
-              font-size: 30px; }
-            #Splash .threeup ul li .text p {
-              background-color: #000;
-              opacity: 0;
-              width: 100%;
-              height: 100%;
-              text-align: justify;
-              color: #fff;
-              padding: 60px 20px 20px; } }
-    @media (min-width: 1200px) {
-      #Splash .threeup ul li .text h3 {
-        top: 30px;
-        left: 30px;
-        font-size: 40px; }
-      #Splash .threeup ul li .text p {
-        padding: 80px 30px 30px; } }
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        #Splash .threeup ul li img {
+          height: 300px; }
+        #Splash .threeup ul li .text p {
+          font-size: 20px;
+          line-height: 32px; } }
   #Splash .splash_request {
     padding-top: 100px; }
     #Splash .splash_request h2 {
