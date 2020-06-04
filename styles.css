@@ -292,8 +292,8 @@ html {
         font-family: data;
         background-color: #fff; }
     #Splash .threeup header .blurb {
-      text-align: justify;
-      line-height: 60px; }
+      text-align: center;
+      line-height: 59px; }
       #Splash .threeup header .blurb span {
         background-color: #fff;
         padding: 15px 0; }
