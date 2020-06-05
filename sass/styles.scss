@@ -1,0 +1,17 @@
+@import 'modules/resets.scss';
+@import 'modules/mixins.scss';
+@import 'modules/colors.scss';
+@import 'modules/typography.scss';
+@import 'modules/header.scss';
+
+img{
+        // width:100%;
+        // height:auto;
+}
+
+/* Pages */
+body > article{
+        margin-top:$headerHeight;
+}
+@import 'pages/splash.scss';
+@import 'pages/syllabus.scss';

@@ -1,0 +1,298 @@
+/* ~~~~~~~~~~~~~~~~~~~~
+* * * * * * * * * * * *
+      S P L A S H
+* * * * * * * * * * * *
+~~~~~~~~~~~~~~~~~~~~~ */
+#Splash{
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        h1{
+                text-align: center;
+                max-width:800px;
+                font-size:50px;
+                line-height: 60px;
+                max-width:1200px;
+        }
+        h2{
+                color:$black;
+                font-family: alphaHeadline;
+                font-size:60px;
+                text-transform:uppercase;
+                max-width:1200px;
+        }
+        p{
+                font-size:28px;
+                line-height: 40px;
+                max-width:1200px;
+                @include desktop{
+                        font-size:28px;
+                        line-height: 36px;
+                }
+        }
+        section{
+                @include phone{
+                        padding:30px 20px 30px;
+                }
+                @include tablet{
+                        padding: 80px 20px;
+                }
+                @include desktop{
+                        padding: 0px 40px;
+                }
+                header h2{
+                        font-family:data;
+                }
+        }
+        .splash_intro,
+        .splash_video,
+        .splash_about,
+        .splash_request,
+        .splash_learn,
+        .splash_explore{
+                @include flexbox();
+                @include flex-direction(column);
+                @include flex-wrap(nowrap);
+                @include justify-content(center);
+                @include align-items(center);
+        }
+        .splash_intro{
+                //background: linear-gradient(124deg, #ef91f7, #FFA251, #F4F18D, #74B6FC, #D177FF);
+                background-color:#000;
+                background-image: url("img/texture-crystals.png");
+                min-height:80vh;
+                color:$white;
+                padding:40px;
+                @include phone{
+                        padding:100px 40px;
+                }
+                p{
+                        font-size:32px;
+                        line-height:42px;
+                        text-align: center;
+                        margin-top:40px;
+                        @include tablet{
+                                max-width:800px;
+                        }
+                }
+        }
+        .splash_video{
+                padding:40px 0;
+                background-color:$black;
+                //box-shadow: inset 0 0 100px 100px rgba(229,78,208,.2);
+                h1{
+                        max-width: 1000px;
+                        text-transform: uppercase;
+                        margin:0 auto;
+                        color:$white;
+                }
+                p{
+                        color:$white;
+                }
+        }
+        .splash_learn{
+                background-image:url("img/aluminum_foil.jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+                header{
+                        h2,p{
+                           color:$white;     
+                        }
+                }
+         }
+        .splash_explore{
+                background-image:url("img/cardboard.jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+                header{
+                        h2,p{
+                                color:$ltblue;
+                        }
+                }
+        }
+        .threeup{
+                header{
+                        margin:40px 0;
+                        max-width: 800px;
+                        h2{
+                                  
+                        }
+                        .blurb{
+
+                        }
+                        @include phone{
+                                h2{
+                                        span{
+                                                padding: 30px 10px 5px;  
+                                        }   
+                                }
+                                .blurb{
+                                        font-size:20px;
+                                        line-height:51px;
+                                        margin-bottom:10px;  
+                                }
+                        }
+                        @include tablet{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                @include justify-content(space-evenly);
+                                padding:150px 50px;
+                                width:100%;
+                                h2 {
+                                        span{
+                                               background-color:$black;
+                                        }
+                                }
+                              .blurb{
+                                       span{
+                                        background-color:$black;
+                                       } 
+                              }  
+                        }
+                }
+                ul{
+                        @include flexbox();
+                        @include flex-wrap(nowrap);
+                        @include flex-direction(column);
+                        @include justify-content(center);
+                        li{
+                                @include flexbox();
+                                @include flex-direction(row);
+                                position:relative;
+                                h3{
+                                        font-family:alphaHeadlineBold;
+                                        text-transform: uppercase;
+                                }
+                        }
+
+                        @include phone{
+                                @include flex-direction(column);
+                                @include flex-wrap(wrap);
+                                li{
+                                        img{
+                                                height:300px;
+                                        }
+                                        .text{
+                                                padding: 20px;
+                                                background-color:$white;
+                                        }
+                                        p{
+                                                font-size:16px;
+                                        }
+
+                                }
+                        }
+                        @include tablet{
+                                @include flex-direction(row);
+                                width:100%;
+                                li{
+                                        @include align-items(center);
+                                        @include justify-content(center);
+                                        width:33%;
+                                        &:hover{
+                                               .text p{
+                                                        opacity:0.90;
+                                                } 
+                                        }
+                                        img{
+                                                width:100%;
+                                                height:300px;
+                                                width:100%;
+                                                height:100%;
+                                                object-fit: cover;
+                                                background-position: center;
+                                                flex:1;
+                                        } 
+                                        .text{
+                                                position:absolute;
+                                                height:100%;
+                                                width:100%;
+                                                transition:all 500ms;
+                                                h3{
+                                                        position:absolute;
+                                                        z-index: 50;
+                                                        top:40px;
+                                                        left:40px;
+                                                        color:$white;
+                                                        font-size:30px;
+                                                }
+                                                p{
+                                                        background-color:$black;
+                                                        opacity:0;
+                                                        width:100%;
+                                                        height:100%;
+                                                        text-align:justify;
+                                                        color:$white;
+                                                        padding:60px 20px 20px;
+                                                } 
+                                        }
+                                }
+                        }
+                        @include desktop{
+                                li{
+                                        .text{
+                                                h3{
+                                                        top:60px;
+                                                        left:40px;
+                                                        font-size:40px;
+                                                }
+                                                p{
+                                                        padding:120px 40px 40px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+        .splash_request{
+                padding-top:100px;
+                background-image:url("img/texture-bubbles.jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+               h2{
+                        @include justify-content(center);
+                        line-height: 60px;
+                        margin-bottom:20px;
+               }
+               ul{
+                        max-width:800px;
+                        margin:0 auto;
+                        li{
+                                font-size:28px;
+                                margin-bottom:30px;
+                                padding-left:20px;
+                                &:before{
+                                        content:"•";
+                                        margin-left:-20px;
+                                }
+                        }
+               }
+        }
+         .splash-request-btn{
+                background-color:$pink;
+                transition:all 0.5s ease;
+                color:$white;
+                margin:100px 0;
+                &:hover{
+                        background-color: $sunset;
+                }
+        }
+        .splash_about{
+                background-color:#000;
+                background-image: url("img/texture-crystals.png");
+                padding:200px 0 200px;
+                h2{
+                        color:$ltblue;
+                }
+                p{
+                        padding:20px;
+                        background-color:$black;
+                        color:$ltblue;
+                        font-size:20px;
+                        line-height: 38px;
+                        width:600px;
+                }
+                
+        }
+       
+}
