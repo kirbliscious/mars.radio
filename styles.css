@@ -166,6 +166,30 @@ p, li {
     margin: 0;
     margin-top: 20px;
     color: #fff; }
+  .header .hamburger {
+    display: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 30px 20px 10px;
+    z-index: 1000; }
+  @media (max-width: 1023px) {
+    .header {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; }
+      .header.active {
+        color: #fff; } }
 
 /* Pages */
 html {
@@ -208,10 +232,18 @@ body > article {
     max-width: 1200px;
     text-align: center;
     margin-top: 20px; }
+  #Splash h3 {
+    font-size: 30px;
+    font-family: alphaHeadlineBold;
+    text-transform: uppercase; }
   #Splash p {
     font-size: 28px;
     line-height: 40px;
     max-width: 1200px; }
+    @media (max-width: 1023px) {
+      #Splash p {
+        font-size: 34px;
+        line-height: 44px; } }
     @media (min-width: 1200px) {
       #Splash p {
         font-size: 20px;
@@ -242,7 +274,7 @@ body > article {
     align-items: center; }
     @media (max-width: 1023px) {
       #Splash section {
-        padding: 30px 20px 30px; } }
+        padding: 60px 20px 60px; } }
     @media (min-width: 1024px) {
       #Splash section {
         padding: 80px 20px; } }
@@ -264,6 +296,10 @@ body > article {
       line-height: 42px;
       text-align: center;
       margin-top: 40px; }
+      @media (max-width: 1023px) {
+        #Splash .splash_intro p {
+          font-size: 36px;
+          line-height: 48px; } }
       @media (min-width: 1024px) {
         #Splash .splash_intro p {
           max-width: 800px; } }
@@ -307,9 +343,6 @@ body > article {
             color: #000;
             opacity: 1;
             background-color: transparent; }
-        #Splash .splash_lessons ul li h3 {
-          font-family: alphaHeadlineBold;
-          text-transform: uppercase; }
       @media (max-width: 1023px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: column;
@@ -386,11 +419,9 @@ body > article {
               transition: all 500ms; }
             #Splash .splash_lessons ul li h3 {
               position: absolute;
-              z-index: 50;
               top: 40px;
               left: 40px;
-              color: #fff;
-              font-size: 30px; }
+              color: #fff; }
             #Splash .splash_lessons ul li p {
               background-color: #000;
               opacity: 0;
@@ -402,8 +433,7 @@ body > article {
       @media (min-width: 1200px) {
         #Splash .splash_lessons ul li h3 {
           top: 60px;
-          left: 40px;
-          font-size: 40px; }
+          left: 40px; }
         #Splash .splash_lessons ul li p {
           padding: 120px 40px 40px; } }
   #Splash .splash_request {

@@ -9,4 +9,10 @@ jQuery(document).ready(function( $ ) {
                 $('.header').removeClass('shrink');
           }
         });
+
+        $('.hamburger').click(function(e) {
+                $('.main-navigation').slideToggle();
+                $('.main-navigation').toggleClass('active');
+                e.preventDefault();
+        });
 });

@@ -23,10 +23,19 @@
                 text-align:center;
                 margin-top:20px;
         }
+        h3{
+                font-size:30px;
+                font-family:alphaHeadlineBold;
+                text-transform: uppercase;
+        }
         p{
                 font-size:28px;
                 line-height: 40px;
                 max-width:1200px;
+                @include phone{
+                        font-size:34px;
+                        line-height: 44px;
+                }
                 @include desktop{
                         font-size:20px;
                         line-height: 36px;
@@ -39,7 +48,7 @@
                 @include justify-content(center);
                 @include align-items(center);
                 @include phone{
-                        padding:30px 20px 30px;
+                        padding:60px 20px 60px;
                 }
                 @include tablet{
                         padding: 80px 20px;
@@ -64,6 +73,10 @@
                         line-height:42px;
                         text-align: center;
                         margin-top:40px;
+                        @include phone{
+                                font-size:36px;
+                                line-height:48px;
+                        }
                         @include tablet{
                                 max-width:800px;
                         }
@@ -88,10 +101,6 @@
                                         @include flex-direction(column);
                                         h3, p{ color:$black; opacity:1; background-color:transparent;}
                                 }
-                                h3{
-                                        font-family:alphaHeadlineBold;
-                                        text-transform: uppercase;
-                                }
                         }
 
                         @include phone{
@@ -115,9 +124,6 @@
                                         .text{
                                                 padding: 20px;
                                                 background-color:$white;
-                                        }
-                                        h3{
-
                                         }
                                         p{
                                                 font-size:16px;
@@ -159,11 +165,9 @@
                                         }
                                         h3{
                                                 position:absolute;
-                                                z-index: 50;
                                                 top:40px;
                                                 left:40px;
                                                 color:$white;
-                                                font-size:30px;
                                         }
                                         p{
                                                 background-color:$black;
@@ -181,7 +185,6 @@
                                        h3{
                                                 top:60px;
                                                 left:40px;
-                                                font-size:40px;
                                         }
                                         p{
                                                 padding:120px 40px 40px;
