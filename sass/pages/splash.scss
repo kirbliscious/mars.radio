@@ -48,11 +48,9 @@
                 @include flex-wrap(nowrap);
                 @include justify-content(center);
                 @include align-items(center);
+                padding: 8% 0.5%;
                 @include phone{
-                        padding:60px 20px 60px;
-                }
-                @include tablet{
-                        padding: 8% 0.5%;
+                        padding: 8% 1%;
                 }
         }
         /* ~~~~~~~~~~~~~~~~~~~~
@@ -117,10 +115,19 @@
                                 @include flex-wrap(nowrap);
                                 li{
                                         @include flex-direction(column);
-                                        margin-bottom:20px;
+                                        margin-bottom:1%;
                                         img{
                                                 height:100%;
                                                 width:100%;
+                                        }
+                                        &:nth-of-type(4n + 1){
+                                                .text{
+                                                        background-color:$black;
+                                                        color:$white;
+                                                        p{
+                                                                background-color:$black;
+                                                        }
+                                                }
                                         }
                                         .text{
                                                 padding: 20px;
@@ -128,8 +135,17 @@
                                         }
                                         p{
                                                 font-size:16px;
+                                                line-height: 35px;
                                         }
 
+                                }
+                        }
+                        @media (min-width:800px) and (max-width:1023px){
+                                li{
+                                        @include flex-direction(row);
+                                        img{
+                                                width:300px;
+                                        }
                                 }
                         }
                         @include tablet{
