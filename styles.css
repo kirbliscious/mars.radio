@@ -291,6 +291,9 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_intro {
+        background-size: contain; } }
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
@@ -324,6 +327,9 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_lessons {
+        background-size: contain; } }
     #Splash .splash_lessons h2 {
       color: #fff;
       text-shadow: 7px 7px #000; }
@@ -459,6 +465,9 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_faq {
+        background-size: contain; } }
     #Splash .splash_faq h2 {
       text-shadow: 7px 7px #fff; }
     #Splash .splash_faq ul {
@@ -486,6 +495,9 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_about {
+        background-size: contain; } }
     #Splash .splash_about h2 {
       color: #71c8f0; }
     #Splash .splash_about p {
