@@ -16,10 +16,12 @@
         }
         h2{
                 color:$black;
-                font-family: alphaHeadline;
+                font-family: data;
                 font-size:60px;
                 text-transform:uppercase;
                 max-width:1200px;
+                text-align:center;
+                margin-top:20px;
         }
         p{
                 font-size:28px;
@@ -31,6 +33,11 @@
                 }
         }
         section{
+                @include flexbox();
+                @include flex-direction(column);
+                @include flex-wrap(nowrap);
+                @include justify-content(center);
+                @include align-items(center);
                 @include phone{
                         padding:30px 20px 30px;
                 }
@@ -40,30 +47,17 @@
                 @include desktop{
                         padding: 80px 40px;
                 }
-                header h2{
-                        font-family:data;
-                }
-        }
-        .splash_intro,
-        .splash_video,
-        .splash_about,
-        .splash_request,
-        .splash_learn,
-        .splash_explore{
-                @include flexbox();
-                @include flex-direction(column);
-                @include flex-wrap(nowrap);
-                @include justify-content(center);
-                @include align-items(center);
         }
         .splash_intro{
-                //background: linear-gradient(124deg, #ef91f7, #FFA251, #F4F18D, #74B6FC, #D177FF);
                 background-color:#000;
                 background-image: url("img/texture-crystals.png");
                 color:$white;
-                padding:40px;
                 @include phone{
                         padding:100px 40px;
+                }
+                .video{
+                        width:100%;
+                        max-width:800px;
                 }
                 p{
                         font-size:32px;
@@ -75,61 +69,10 @@
                         }
                 }
         }
-        .splash_learn{
+        .splash_lessons{
                 background-image:url("img/aluminum_foil.jpg");
                 background-size: cover;
                 background-repeat:no-repeat;
-         }
-        .splash_explore{
-                background-image:url("img/cardboard.jpg");
-                background-size: cover;
-                background-repeat:no-repeat;
-                header{
-                        h2,p{
-                                color:$ltblue;
-                        }
-                }
-        }
-        .threeup{
-                header{
-                        margin:40px 0;
-                        max-width: 800px;
-                        h2{
-                                  
-                        }
-                        .blurb{
-
-                        }
-                        @include phone{
-                                h2{
-                                        span{
-                                                padding: 30px 10px 5px;  
-                                        }   
-                                }
-                                .blurb{
-                                        font-size:20px;
-                                        line-height:51px;
-                                        margin-bottom:10px;  
-                                }
-                        }
-                        @include tablet{
-                                @include flexbox();
-                                @include flex-direction(column);
-                                @include justify-content(space-evenly);
-                                padding:150px 50px;
-                                width:100%;
-                                h2 {
-                                        span{
-                                               background-color:$black;
-                                        }
-                                }
-                              .blurb{
-                                       span{
-                                        background-color:$black;
-                                       } 
-                              }  
-                        }
-                }
                 ul{
                         @include flexbox();
                         @include flex-wrap(nowrap);
@@ -137,8 +80,14 @@
                         @include justify-content(center);
                         li{
                                 @include flexbox();
-                                @include flex-direction(row);
                                 position:relative;
+                                &.learn-text,
+                                &.explore-text,
+                                &.create-text{
+                                        background-color:$white;
+                                        @include flex-direction(column);
+                                        h3, p{ color:$black; opacity:1; background-color:transparent;}
+                                }
                                 h3{
                                         font-family:alphaHeadlineBold;
                                         text-transform: uppercase;
@@ -147,14 +96,28 @@
 
                         @include phone{
                                 @include flex-direction(column);
-                                @include flex-wrap(wrap);
+                                @include flex-wrap(nowrap);
                                 li{
+                                        @include flex-direction(column);
+                                        margin-bottom:20px;
                                         img{
-                                                height:300px;
+                                                height:100%;
+                                                width:100%;
+                                        }
+                                        &.learn-text .text,
+                                        &.explore-text .text,
+                                        &.create-text .text{
+                                                background-color:$black;
+                                                h3, p{
+                                                        color:$white;
+                                                }
                                         }
                                         .text{
                                                 padding: 20px;
                                                 background-color:$white;
+                                        }
+                                        h3{
+
                                         }
                                         p{
                                                 font-size:16px;
@@ -178,13 +141,6 @@
                                                .text p{
                                                         opacity:0.90;
                                                 } 
-                                        }
-                                        &.learn-text,
-                                        &.explore-text,
-                                        &.create-text{
-                                                background-color:$white;
-                                                @include flex-direction(column);
-                                                h3, p{ color:$black; opacity:1; background-color:transparent;}
                                         }
                                         img{
                                                 width:100%;
@@ -235,7 +191,6 @@
                 }
         }
         .splash_request{
-                padding-top:100px;
                 background-image:url("img/texture-bubbles.jpg");
                 background-size: cover;
                 background-repeat:no-repeat;
@@ -245,14 +200,14 @@
                         margin-bottom:20px;
                }
                ul{
-                        max-width:800px;
+                        max-width:1000px;
                         margin:0 auto;
-                        background-color:$white;
-                        padding:40px;
                         li{
                                 font-size:28px;
-                                margin-bottom:30px;
+                                margin-bottom:6px;
                                 padding-left:20px;
+                                background-color:$white;
+                                padding:20px;
                                 &:before{
                                         content:"•";
                                         margin-left:-20px;
@@ -264,7 +219,9 @@
                 background-color:$pink;
                 transition:all 0.5s ease;
                 color:$white;
-                margin:100px 0;
+                font-family:alphaHeadline;
+                font-size:60px;
+
                 &:hover{
                         background-color: $sunset;
                 }
@@ -272,7 +229,6 @@
         .splash_about{
                 background-color:#000;
                 background-image: url("img/texture-crystals.png");
-                padding:200px 0 200px;
                 h2{
                         color:$ltblue;
                 }
