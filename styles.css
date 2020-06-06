@@ -239,9 +239,12 @@ body > article {
     padding-top: 25px;
     margin-bottom: 8%; }
   #Splash h3 {
-    font-size: 30px;
+    font-size: 170%;
     font-family: alphaHeadlineBold;
     text-transform: uppercase; }
+    @media (max-width: 1023px) {
+      #Splash h3 {
+        font-size: 34px; } }
   #Splash p {
     font-size: 28px;
     line-height: 40px;
@@ -291,6 +294,11 @@ body > article {
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
+    @media (max-width: 1023px) {
+      #Splash .splash_intro h1 span,
+      #Splash .splash_intro p span {
+        background-color: #000;
+        box-shadow: 0 0 5px 5px #000; } }
     #Splash .splash_intro h1 span,
     #Splash .splash_intro p span {
       background-color: #000;
@@ -345,6 +353,10 @@ body > article {
         display: -webkit-flex;
         display: flex;
         position: relative; }
+      #Splash .splash_lessons ul .text {
+        padding: 4%; }
+      #Splash .splash_lessons ul h3 {
+        margin-bottom: 3%; }
       @media (max-width: 1023px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: column;
@@ -370,19 +382,10 @@ body > article {
               #Splash .splash_lessons ul li:nth-of-type(4n + 1) .text p {
                 background-color: #000; }
             #Splash .splash_lessons ul li .text {
-              padding: 20px;
               background-color: #fff; }
             #Splash .splash_lessons ul li p {
-              font-size: 16px;
+              font-size: 115%;
               line-height: 35px; } }
-      @media (min-width: 800px) and (max-width: 1023px) {
-        #Splash .splash_lessons ul li {
-          -webkit-flex-direction: row;
-          -moz-flex-direction: row;
-          -ms-flex-direction: row;
-          flex-direction: row; }
-          #Splash .splash_lessons ul li img {
-            width: 300px; } }
       @media (min-width: 1024px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: row;
@@ -439,7 +442,6 @@ body > article {
               top: 9%;
               left: 9%;
               z-index: 50;
-              margin-bottom: 20px;
               letter-spacing: 0.03em; }
             #Splash .splash_lessons ul li p {
               position: absolute;

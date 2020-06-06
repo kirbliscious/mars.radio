@@ -25,9 +25,12 @@
                 margin-bottom:8%;
         }
         h3{
-                font-size:30px;
+                font-size:170%;
                 font-family:alphaHeadlineBold;
                 text-transform: uppercase;
+                @include phone{
+                        font-size:34px;
+                }
         }
         p{
                 font-size:28px;
@@ -68,6 +71,13 @@
                 // Highlighted text illusion
                 // Embed span nd give it a bg (highlight) color 
                 // (opt) Add box shadow
+                @include phone{
+                     h1 span,
+                        p span{
+                                background-color:$black;
+                                box-shadow:0 0 5px 5px $black; 
+                        }   
+                }
                 h1 span,
                 p span{
                         background-color:$black;
@@ -108,7 +118,12 @@
                                 @include flexbox();
                                 position:relative; // needed to absolutely position texts boxes on hover
                         }
-
+                        .text{
+                                padding:4%;
+                        }
+                        h3{
+                                margin-bottom:3%;
+                        }
 
                         @include phone{
                                 @include flex-direction(column);
@@ -130,24 +145,24 @@
                                                 }
                                         }
                                         .text{
-                                                padding: 20px;
                                                 background-color:$white;
                                         }
                                         p{
-                                                font-size:16px;
+                                                font-size:115%;
                                                 line-height: 35px;
                                         }
 
                                 }
                         }
-                        @media (min-width:800px) and (max-width:1023px){
-                                li{
-                                        @include flex-direction(row);
-                                        img{
-                                                width:300px;
-                                        }
-                                }
-                        }
+                        // figure out desktop phone targeting
+                        // @media (min-width:800px) and (max-width:1023px){
+                        //         li{
+                        //                 @include flex-direction(row);
+                        //                 img{
+                        //                         width:300px;
+                        //                 }
+                        //         }
+                        // }
                         @include tablet{
                                 @include flex-direction(row);
                                 @include flex-wrap(wrap);
@@ -194,7 +209,6 @@
                                                 position:absolute;
                                                 top:9%; left:9%;
                                                 z-index:50;
-                                                margin-bottom:20px;
                                                 letter-spacing:0.03em;
                                         }
                                         p{      
