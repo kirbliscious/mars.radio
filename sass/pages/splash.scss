@@ -11,8 +11,9 @@
                 text-align: center;
                 max-width:800px;
                 font-size:50px;
-                line-height: 60px;
+                line-height: 76px;
                 max-width:1200px;
+                letter-spacing:0.03em;
         }
         h2{
                 color:$black;
@@ -69,11 +70,20 @@
                         width:100%;
                         max-width:800px;
                 }
+                // Highlighted text illusion
+                // Embed span nd give it a bg (highlight) color 
+                // (opt) Add box shadow
+                h1 span,
+                p span{
+                        background-color:$black;
+                        box-shadow:0 0 10px 10px $black; 
+                }
                 p{
                         font-size:32px;
-                        line-height:42px;
+                        line-height:50px;
                         text-align: center;
                         margin-top:40px;
+                        letter-spacing: 0.03em;
                         @include phone{
                                 font-size:36px;
                                 line-height:48px;
