@@ -386,14 +386,6 @@ body > article {
             #Splash .splash_lessons ul li p {
               font-size: 115%;
               line-height: 35px; } }
-      @media (min-width: 800px) and (max-width: 1023px) {
-        #Splash .splash_lessons ul li {
-          -webkit-flex-direction: row;
-          -moz-flex-direction: row;
-          -ms-flex-direction: row;
-          flex-direction: row; }
-          #Splash .splash_lessons ul li img {
-            width: 300px; } }
       @media (min-width: 1024px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: row;

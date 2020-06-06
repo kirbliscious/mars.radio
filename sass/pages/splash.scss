@@ -154,14 +154,15 @@
 
                                 }
                         }
-                        @media (min-width:800px) and (max-width:1023px){
-                                li{
-                                        @include flex-direction(row);
-                                        img{
-                                                width:300px;
-                                        }
-                                }
-                        }
+                        // figure out desktop phone targeting
+                        // @media (min-width:800px) and (max-width:1023px){
+                        //         li{
+                        //                 @include flex-direction(row);
+                        //                 img{
+                        //                         width:300px;
+                        //                 }
+                        //         }
+                        // }
                         @include tablet{
                                 @include flex-direction(row);
                                 @include flex-wrap(wrap);
