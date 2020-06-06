@@ -226,8 +226,8 @@ body > article {
   #Splash h1 {
     text-align: center;
     max-width: 800px;
-    font-size: 50px;
-    line-height: 76px;
+    font-size: 230%;
+    line-height: 130%;
     max-width: 1200px;
     letter-spacing: 0.03em; }
   #Splash h2 {
@@ -239,24 +239,14 @@ body > article {
     padding-top: 25px;
     margin-bottom: 8%; }
   #Splash h3 {
-    font-size: 170%;
+    font-size: 30px;
     font-family: alphaHeadlineBold;
     text-transform: uppercase; }
-    @media (max-width: 1023px) {
-      #Splash h3 {
-        font-size: 34px; } }
   #Splash p {
-    font-size: 28px;
-    line-height: 40px;
-    max-width: 1200px; }
-    @media (max-width: 1023px) {
-      #Splash p {
-        font-size: 34px;
-        line-height: 44px; } }
-    @media (min-width: 1200px) {
-      #Splash p {
-        font-size: 20px;
-        line-height: 36px; } }
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 1200px;
+    margin-bottom: 5%; }
   #Splash section {
     display: -webkit-box;
     display: -moz-box;
@@ -297,31 +287,23 @@ body > article {
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
+    #Splash .splash_intro h1 span,
+    #Splash .splash_intro p span {
+      background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px 10px #000; }
     @media (max-width: 1023px) {
       #Splash .splash_intro h1 span,
       #Splash .splash_intro p span {
         background-color: #000;
         box-shadow: 0 0 5px 5px #000; } }
-    #Splash .splash_intro h1 span,
-    #Splash .splash_intro p span {
-      background-color: #000;
-      box-shadow: 0 0 10px 10px #000; }
+    #Splash .splash_intro h1, #Splash .splash_intro p {
+      padding: 0 5%; }
     #Splash .splash_intro p {
-      font-size: 32px;
-      line-height: 50px;
       text-align: center;
-      margin-top: 40px;
       letter-spacing: 0.03em; }
-      @media (max-width: 1023px) {
-        #Splash .splash_intro p {
-          font-size: 36px;
-          line-height: 48px; } }
       @media (min-width: 1024px) {
         #Splash .splash_intro p {
           max-width: 800px; } }
-    @media (max-width: 1023px) {
-      #Splash .splash_intro h1, #Splash .splash_intro p {
-        background-color: rgba(0, 0, 0, 0.5); } }
   #Splash .splash_lessons {
     background-image: url("img/aluminum_foil.jpg");
     background-size: cover;
@@ -383,15 +365,11 @@ body > article {
               height: 100%;
               width: 100%; }
             #Splash .splash_lessons ul li:nth-of-type(4n + 1) .text {
-              background-color: #000;
-              color: #fff; }
-              #Splash .splash_lessons ul li:nth-of-type(4n + 1) .text p {
-                background-color: #000; }
+              background-color: #fff;
+              color: #000; }
             #Splash .splash_lessons ul li .text {
-              background-color: #fff; }
-            #Splash .splash_lessons ul li p {
-              font-size: 115%;
-              line-height: 35px; } }
+              background-color: #000;
+              color: #fff; } }
       @media (min-width: 1024px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: row;
@@ -457,9 +435,7 @@ body > article {
               height: 100%;
               background-color: #000;
               padding: 20% 9%;
-              opacity: 0;
-              font-size: 21px;
-              line-height: 33px; } }
+              opacity: 0; } }
   #Splash .splash_faq {
     background-image: url("img/texture-bubbles.jpg");
     background-size: cover;
@@ -482,6 +458,16 @@ body > article {
         #Splash .splash_faq ul li:before {
           content: "•";
           margin-left: -20px; }
+  #Splash .splash_becomeamartian {
+    background-image: url("img/texture2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_becomeamartian {
+        background-size: contain; } }
+    #Splash .splash_becomeamartian h2 {
+      line-height: 200px; }
   #Splash .splash-request-btn {
     background-color: #e54ed0;
     transition: all 0.5s ease;
@@ -491,7 +477,7 @@ body > article {
     #Splash .splash-request-btn:hover {
       background-color: #db5549; }
   #Splash .splash_about {
-    background-image: url("img/texture-crystals.png");
+    background-image: url("img/texture-space.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }

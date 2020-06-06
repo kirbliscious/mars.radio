@@ -10,8 +10,8 @@
         h1{
                 text-align: center;
                 max-width:800px;
-                font-size:50px;
-                line-height: 76px;
+                font-size:230%;
+                line-height:130%;
                 max-width:1200px;
                 letter-spacing:0.03em;
         }
@@ -25,25 +25,15 @@
                 margin-bottom:8%;
         }
         h3{
-                font-size:170%;
+                font-size:30px;
                 font-family:alphaHeadlineBold;
                 text-transform: uppercase;
-                @include phone{
-                        font-size:34px;
-                }
         }
         p{
-                font-size:28px;
-                line-height: 40px;
+                font-size:20px;
+                line-height: 32px;
                 max-width:1200px;
-                @include phone{
-                        font-size:34px;
-                        line-height: 44px;
-                }
-                @include desktop{
-                        font-size:20px;
-                        line-height: 36px;
-                }
+                margin-bottom:5%;
         }
         section{
                 @include flexbox();
@@ -71,6 +61,11 @@
                 // Highlighted text illusion
                 // Embed span nd give it a bg (highlight) color 
                 // (opt) Add box shadow
+                h1 span,
+                p span{
+                        background-color:rgba(0, 0, 0, 0.1);
+                        box-shadow:0 0 10px 10px $black; 
+                }
                 @include phone{
                      h1 span,
                         p span{
@@ -78,30 +73,16 @@
                                 box-shadow:0 0 5px 5px $black; 
                         }   
                 }
-                h1 span,
-                p span{
-                        background-color:$black;
-                        box-shadow:0 0 10px 10px $black; 
+                h1,p{
+                        padding:0 5%;
                 }
                 p{
-                        font-size:32px;
-                        line-height:50px;
                         text-align: center;
-                        margin-top:40px;
                         letter-spacing: 0.03em;
-                        @include phone{
-                                font-size:36px;
-                                line-height:48px;
-                        }
                         @include tablet{
                                 max-width:800px;
                         }
                 }
-                 @include phone{
-                        h1, p{
-                                background-color:rgba(0, 0, 0, 0.5);
-                        }
-                 }
         }
         .splash_lessons{
                 @include background-image("img/aluminum_foil.jpg");
@@ -137,21 +118,14 @@
                                         }
                                         &:nth-of-type(4n + 1){
                                                 .text{
-                                                        background-color:$black;
-                                                        color:$white;
-                                                        p{
-                                                                background-color:$black;
-                                                        }
+                                                        background-color:$white;
+                                                        color:$black;
                                                 }
                                         }
                                         .text{
-                                                background-color:$white;
+                                                background-color:$black;
+                                                color:$white;
                                         }
-                                        p{
-                                                font-size:115%;
-                                                line-height: 35px;
-                                        }
-
                                 }
                         }
                         // figure out desktop phone targeting
@@ -219,8 +193,6 @@
                                                 background-color:$black;
                                                 padding:20% 9%;
                                                 opacity:0;
-                                                font-size:21px;
-                                                line-height:33px;
                                         } 
                                 }
                         }
@@ -247,6 +219,10 @@
                         }
                }
         }
+        .splash_becomeamartian{
+                @include background-image("img/texture2.png");
+                h2 {line-height:200px;}
+        }
          .splash-request-btn{
                 background-color:$pink;
                 transition:all 0.5s ease;
@@ -259,7 +235,7 @@
                 }
         }
         .splash_about{
-                @include background-image("img/texture-crystals.png");
+                @include background-image("img/texture-space.png");
                 h2{
                         color:$ltblue;
                 }
