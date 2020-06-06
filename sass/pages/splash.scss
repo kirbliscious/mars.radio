@@ -16,140 +16,80 @@
         }
         h2{
                 color:$black;
-                font-family: alphaHeadline;
+                font-family: data;
                 font-size:60px;
                 text-transform:uppercase;
                 max-width:1200px;
+                text-align:center;
+                margin-top:20px;
+        }
+        h3{
+                font-size:30px;
+                font-family:alphaHeadlineBold;
+                text-transform: uppercase;
         }
         p{
                 font-size:28px;
                 line-height: 40px;
                 max-width:1200px;
+                @include phone{
+                        font-size:34px;
+                        line-height: 44px;
+                }
                 @include desktop{
-                        font-size:28px;
+                        font-size:20px;
                         line-height: 36px;
                 }
         }
         section{
-                @include phone{
-                        padding:30px 20px 30px;
-                }
-                @include tablet{
-                        padding: 80px 20px;
-                }
-                @include desktop{
-                        padding: 0px 40px;
-                }
-                header h2{
-                        font-family:data;
-                }
-        }
-        .splash_intro,
-        .splash_video,
-        .splash_about,
-        .splash_request,
-        .splash_learn,
-        .splash_explore{
                 @include flexbox();
                 @include flex-direction(column);
                 @include flex-wrap(nowrap);
                 @include justify-content(center);
                 @include align-items(center);
-        }
-        .splash_intro{
-                //background: linear-gradient(124deg, #ef91f7, #FFA251, #F4F18D, #74B6FC, #D177FF);
-                background-color:#000;
-                background-image: url("img/texture-crystals.png");
-                min-height:80vh;
-                color:$white;
-                padding:40px;
                 @include phone{
-                        padding:100px 40px;
+                        padding:60px 20px 60px;
+                }
+                @include tablet{
+                        padding: 80px 20px;
+                }
+                @include desktop{
+                        padding: 80px 40px;
+                }
+        }
+        /* ~~~~~~~~~~~~~~~~~~~~
+        ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ
+              I N T R O
+        /\/\/\/\/\/\/\/\/\/\/\
+        ~~~~~~~~~~~~~~~~~~~~~ */
+        .splash_intro{
+                color:$white;
+                @include background-image('img/texture-crystals.png');
+                .video{
+                        width:100%;
+                        max-width:800px;
                 }
                 p{
                         font-size:32px;
                         line-height:42px;
                         text-align: center;
                         margin-top:40px;
+                        @include phone{
+                                font-size:36px;
+                                line-height:48px;
+                        }
                         @include tablet{
                                 max-width:800px;
                         }
                 }
+                 @include phone{
+                        h1, p{
+                                background-color:rgba(0, 0, 0, 0.5);
+                        }
+                 }
         }
-        .splash_video{
-                padding:40px 0;
-                background-color:$black;
-                //box-shadow: inset 0 0 100px 100px rgba(229,78,208,.2);
-                h1{
-                        max-width: 1000px;
-                        text-transform: uppercase;
-                        margin:0 auto;
-                        color:$white;
-                }
-                p{
-                        color:$white;
-                }
-        }
-        .splash_learn{
-                background-image:url("img/aluminum_foil.jpg");
-                background-size: cover;
-                background-repeat:no-repeat;
-                header{
-                        h2,p{
-                           color:$white;     
-                        }
-                }
-         }
-        .splash_explore{
-                background-image:url("img/cardboard.jpg");
-                background-size: cover;
-                background-repeat:no-repeat;
-                header{
-                        h2,p{
-                                color:$ltblue;
-                        }
-                }
-        }
-        .threeup{
-                header{
-                        margin:40px 0;
-                        max-width: 800px;
-                        h2{
-                                  
-                        }
-                        .blurb{
-
-                        }
-                        @include phone{
-                                h2{
-                                        span{
-                                                padding: 30px 10px 5px;  
-                                        }   
-                                }
-                                .blurb{
-                                        font-size:20px;
-                                        line-height:51px;
-                                        margin-bottom:10px;  
-                                }
-                        }
-                        @include tablet{
-                                @include flexbox();
-                                @include flex-direction(column);
-                                @include justify-content(space-evenly);
-                                padding:150px 50px;
-                                width:100%;
-                                h2 {
-                                        span{
-                                               background-color:$black;
-                                        }
-                                }
-                              .blurb{
-                                       span{
-                                        background-color:$black;
-                                       } 
-                              }  
-                        }
-                }
+        .splash_lessons{
+                @include background-image("img/aluminum_foil.jpg");
                 ul{
                         @include flexbox();
                         @include flex-wrap(nowrap);
@@ -157,20 +97,33 @@
                         @include justify-content(center);
                         li{
                                 @include flexbox();
-                                @include flex-direction(row);
                                 position:relative;
-                                h3{
-                                        font-family:alphaHeadlineBold;
-                                        text-transform: uppercase;
+                                &.learn-text,
+                                &.explore-text,
+                                &.create-text{
+                                        background-color:$white;
+                                        @include flex-direction(column);
+                                        h3, p{ color:$black; opacity:1; background-color:transparent;}
                                 }
                         }
 
                         @include phone{
                                 @include flex-direction(column);
-                                @include flex-wrap(wrap);
+                                @include flex-wrap(nowrap);
                                 li{
+                                        @include flex-direction(column);
+                                        margin-bottom:20px;
                                         img{
-                                                height:300px;
+                                                height:100%;
+                                                width:100%;
+                                        }
+                                        &.learn-text .text,
+                                        &.explore-text .text,
+                                        &.create-text .text{
+                                                background-color:$black;
+                                                h3, p{
+                                                        color:$white;
+                                                }
                                         }
                                         .text{
                                                 padding: 20px;
@@ -184,11 +137,16 @@
                         }
                         @include tablet{
                                 @include flex-direction(row);
+                                @include flex-wrap(wrap);
+                                @include justify-content(space-evenly);
                                 width:100%;
                                 li{
                                         @include align-items(center);
                                         @include justify-content(center);
                                         width:33%;
+                                        max-width:500px;
+                                        max-height:500px;
+                                        margin-bottom:40px;
                                         &:hover{
                                                .text p{
                                                         opacity:0.90;
@@ -208,59 +166,53 @@
                                                 height:100%;
                                                 width:100%;
                                                 transition:all 500ms;
-                                                h3{
-                                                        position:absolute;
-                                                        z-index: 50;
-                                                        top:40px;
-                                                        left:40px;
-                                                        color:$white;
-                                                        font-size:30px;
-                                                }
-                                                p{
-                                                        background-color:$black;
-                                                        opacity:0;
-                                                        width:100%;
-                                                        height:100%;
-                                                        text-align:justify;
-                                                        color:$white;
-                                                        padding:60px 20px 20px;
-                                                } 
                                         }
+                                        h3{
+                                                position:absolute;
+                                                top:40px;
+                                                left:40px;
+                                                color:$white;
+                                        }
+                                        p{
+                                                background-color:$black;
+                                                opacity:0;
+                                                width:100%;
+                                                height:100%;
+                                                text-align:justify;
+                                                color:$white;
+                                                padding:60px 20px 20px;
+                                        } 
                                 }
                         }
                         @include desktop{
                                 li{
-                                        .text{
-                                                h3{
-                                                        top:60px;
-                                                        left:40px;
-                                                        font-size:40px;
-                                                }
-                                                p{
-                                                        padding:120px 40px 40px;
-                                                }
+                                       h3{
+                                                top:60px;
+                                                left:40px;
+                                        }
+                                        p{
+                                                padding:120px 40px 40px;
                                         }
                                 }
                         }
                 }
         }
         .splash_request{
-                padding-top:100px;
-                background-image:url("img/texture-bubbles.jpg");
-                background-size: cover;
-                background-repeat:no-repeat;
-               h2{
+                @include background-image("img/texture-bubbles.jpg");
+                h2{
                         @include justify-content(center);
                         line-height: 60px;
                         margin-bottom:20px;
-               }
-               ul{
-                        max-width:800px;
+                }
+                ul{
+                        max-width:1000px;
                         margin:0 auto;
                         li{
                                 font-size:28px;
-                                margin-bottom:30px;
+                                margin-bottom:6px;
                                 padding-left:20px;
+                                background-color:$white;
+                                padding:20px;
                                 &:before{
                                         content:"•";
                                         margin-left:-20px;
@@ -272,15 +224,15 @@
                 background-color:$pink;
                 transition:all 0.5s ease;
                 color:$white;
-                margin:100px 0;
+                font-family:alphaHeadline;
+                font-size:60px;
+
                 &:hover{
                         background-color: $sunset;
                 }
         }
         .splash_about{
-                background-color:#000;
-                background-image: url("img/texture-crystals.png");
-                padding:200px 0 200px;
+                @include background-image("img/texture-crystals.png");
                 h2{
                         color:$ltblue;
                 }

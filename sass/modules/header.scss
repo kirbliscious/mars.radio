@@ -26,4 +26,19 @@
                 margin-top:20px;
                 color:$white;
         }
+        .hamburger{
+                display: none;
+                font-size:20px;
+                color:$white;
+                padding:20px 30px 20px 10px;
+                z-index: 1000;
+        }
+        @include phone{
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content(center);
+                &.active{
+                        color:$white;
+                }
+        }
 }

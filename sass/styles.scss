@@ -1,15 +1,13 @@
 @import 'modules/resets.scss';
 @import 'modules/mixins.scss';
-@import 'modules/colors.scss';
+@import 'modules/variables.scss';
 @import 'modules/typography.scss';
 @import 'modules/header.scss';
 
-img{
-        // width:100%;
-        // height:auto;
-}
-
 /* Pages */
+html{
+        background-color:$black;
+}
 body > article{
         margin-top:$headerHeight;
 }
