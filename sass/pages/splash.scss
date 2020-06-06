@@ -16,13 +16,13 @@
                 letter-spacing:0.03em;
         }
         h2{
-                color:$black;
-                font-family: data;
-                font-size:60px;
-                text-transform:uppercase;
                 max-width:1200px;
+                font-family: data;
+                font-size:80px;
+                text-transform:uppercase;
                 text-align:center;
-                margin-top:20px;
+                padding-top:25px; //font fix
+                margin-bottom:8%;
         }
         h3{
                 font-size:30px;
@@ -52,10 +52,7 @@
                         padding:60px 20px 60px;
                 }
                 @include tablet{
-                        padding: 80px 20px;
-                }
-                @include desktop{
-                        padding: 80px 40px;
+                        padding: 8% 0.5%;
                 }
         }
         /* ~~~~~~~~~~~~~~~~~~~~
@@ -100,6 +97,10 @@
         }
         .splash_lessons{
                 @include background-image("img/aluminum_foil.jpg");
+                h2{
+                        color:$white;
+                        text-shadow:7px 7px $black;
+                }
                 ul{
                         @include flexbox();
                         @include flex-wrap(nowrap);
@@ -107,15 +108,9 @@
                         @include justify-content(center);
                         li{
                                 @include flexbox();
-                                position:relative;
-                                &.learn-text,
-                                &.explore-text,
-                                &.create-text{
-                                        background-color:$white;
-                                        @include flex-direction(column);
-                                        h3, p{ color:$black; opacity:1; background-color:transparent;}
-                                }
+                                position:relative; // needed to absolutely position texts boxes on hover
                         }
+
 
                         @include phone{
                                 @include flex-direction(column);
@@ -126,14 +121,6 @@
                                         img{
                                                 height:100%;
                                                 width:100%;
-                                        }
-                                        &.learn-text .text,
-                                        &.explore-text .text,
-                                        &.create-text .text{
-                                                background-color:$black;
-                                                h3, p{
-                                                        color:$white;
-                                                }
                                         }
                                         .text{
                                                 padding: 20px;
@@ -153,14 +140,22 @@
                                 li{
                                         @include align-items(center);
                                         @include justify-content(center);
-                                        width:33%;
-                                        max-width:500px;
-                                        max-height:500px;
-                                        margin-bottom:40px;
+                                        width:32.5%;
+                                        margin:0 0.1% 0.5%;
                                         &:hover{
                                                .text p{
                                                         opacity:0.90;
                                                 } 
+                                        }
+                                        // Cluster of 4, selecting first item
+                                        &:nth-of-type(4n + 1){
+                                                .text{
+                                                        color:$black;
+                                                        p{
+                                                                background-color:$white;
+                                                                opacity:1;      
+                                                        }
+                                                }
                                         }
                                         img{
                                                 width:100%;
@@ -170,49 +165,41 @@
                                                 object-fit: cover;
                                                 background-position: center;
                                                 flex:1;
-                                        } 
+                                        }
                                         .text{
-                                                position:absolute;
+                                                position:absolute;  
                                                 height:100%;
                                                 width:100%;
                                                 transition:all 500ms;
+                                                padding:30px;
+                                                color:$white;
                                         }
                                         h3{
                                                 position:absolute;
-                                                top:40px;
-                                                left:40px;
-                                                color:$white;
+                                                top:9%; left:9%;
+                                                z-index:50;
+                                                margin-bottom:20px;
+                                                letter-spacing:0.03em;
                                         }
-                                        p{
-                                                background-color:$black;
-                                                opacity:0;
+                                        p{      
+                                                position:absolute;
+                                                top:0; left:0;
                                                 width:100%;
                                                 height:100%;
-                                                text-align:justify;
-                                                color:$white;
-                                                padding:60px 20px 20px;
+                                                background-color:$black;
+                                                padding:20% 9%;
+                                                opacity:0;
+                                                font-size:21px;
+                                                line-height:33px;
                                         } 
-                                }
-                        }
-                        @include desktop{
-                                li{
-                                       h3{
-                                                top:60px;
-                                                left:40px;
-                                        }
-                                        p{
-                                                padding:120px 40px 40px;
-                                        }
                                 }
                         }
                 }
         }
-        .splash_request{
+        .splash_faq{
                 @include background-image("img/texture-bubbles.jpg");
                 h2{
-                        @include justify-content(center);
-                        line-height: 60px;
-                        margin-bottom:20px;
+                        text-shadow:7px 7px $white;
                 }
                 ul{
                         max-width:1000px;
