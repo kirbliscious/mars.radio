@@ -28,6 +28,9 @@
                 font-size:30px;
                 font-family:alphaHeadlineBold;
                 text-transform: uppercase;
+                @include phone{
+                        font-size:34px;
+                }
         }
         p{
                 font-size:28px;
@@ -68,6 +71,13 @@
                 // Highlighted text illusion
                 // Embed span nd give it a bg (highlight) color 
                 // (opt) Add box shadow
+                @include phone{
+                     h1 span,
+                        p span{
+                                background-color:$black;
+                                box-shadow:0 0 5px 5px $black; 
+                        }   
+                }
                 h1 span,
                 p span{
                         background-color:$black;
@@ -134,7 +144,7 @@
                                                 background-color:$white;
                                         }
                                         p{
-                                                font-size:16px;
+                                                font-size:20px;
                                                 line-height: 35px;
                                         }
 

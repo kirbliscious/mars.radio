@@ -242,6 +242,9 @@ body > article {
     font-size: 30px;
     font-family: alphaHeadlineBold;
     text-transform: uppercase; }
+    @media (max-width: 1023px) {
+      #Splash h3 {
+        font-size: 34px; } }
   #Splash p {
     font-size: 28px;
     line-height: 40px;
@@ -291,6 +294,11 @@ body > article {
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
+    @media (max-width: 1023px) {
+      #Splash .splash_intro h1 span,
+      #Splash .splash_intro p span {
+        background-color: #000;
+        box-shadow: 0 0 5px 5px #000; } }
     #Splash .splash_intro h1 span,
     #Splash .splash_intro p span {
       background-color: #000;
@@ -373,7 +381,7 @@ body > article {
               padding: 20px;
               background-color: #fff; }
             #Splash .splash_lessons ul li p {
-              font-size: 16px;
+              font-size: 20px;
               line-height: 35px; } }
       @media (min-width: 800px) and (max-width: 1023px) {
         #Splash .splash_lessons ul li {
