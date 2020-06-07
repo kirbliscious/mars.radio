@@ -53,6 +53,9 @@
                         padding: 8% 1%;
                 }
         }
+        @include phone{
+                overflow:hidden;
+        }
         /* ~~~~~~~~~~~~~~~~~~~~
         ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ^ˆ
               I N T R O

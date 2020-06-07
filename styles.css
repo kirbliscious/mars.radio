@@ -288,6 +288,9 @@ body > article {
     @media (max-width: 1023px) {
       #Splash section {
         padding: 8% 1%; } }
+  @media (max-width: 1023px) {
+    #Splash {
+      overflow: hidden; } }
   #Splash .splash_intro {
     color: #fff;
     background-image: url("/img/texture-crystals.png");
