@@ -287,13 +287,19 @@ body > article {
     padding: 8% 0.5%; }
     @media (max-width: 1023px) {
       #Splash section {
-        padding: 8% 1%; } }
+        padding: 8% 0%; } }
   @media (max-width: 1023px) {
     #Splash {
       overflow: hidden; } }
   #Splash .splash_intro {
     color: #fff;
-    background-color: red; }
+    background-image: url("/img/texture-crystals.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_intro {
+        background-size: contain; } }
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
@@ -352,11 +358,16 @@ body > article {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        position: relative; }
-      #Splash .splash_lessons ul .text {
-        padding: 6%; }
-      #Splash .splash_lessons ul h3 {
-        margin-bottom: 3%; }
+        position: relative;
+        background-color: #000;
+        color: #fff; }
+        #Splash .splash_lessons ul li:nth-of-type(4n + 1) {
+          color: #000;
+          background-color: #fff; }
+          #Splash .splash_lessons ul li:nth-of-type(4n + 1) p {
+            opacity: 1; }
+        #Splash .splash_lessons ul li p {
+          transition: opacity 0.5s ease; }
       @media (max-width: 1023px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: column;
@@ -371,18 +382,15 @@ body > article {
             -webkit-flex-direction: column;
             -moz-flex-direction: column;
             -ms-flex-direction: column;
-            flex-direction: column;
-            margin-bottom: 1%; }
+            flex-direction: column; }
             #Splash .splash_lessons ul li img {
               height: 100%;
               width: 100%; }
-            #Splash .splash_lessons ul li:nth-of-type(4n + 1) .text {
-              background-color: #fff;
-              color: #000; }
-            #Splash .splash_lessons ul li .text {
-              background-color: #000;
-              color: #fff;
-              padding: 30px; } }
+            #Splash .splash_lessons ul li h3 {
+              padding: 30px 30px 10px; }
+            #Splash .splash_lessons ul li p {
+              padding: 0 30px 30px;
+              margin-bottom: 0; } }
       @media (min-width: 1024px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: row;
@@ -412,13 +420,8 @@ body > article {
             -ms-flex-pack: center;
             width: 32.5%;
             margin: 0 0.1% 0.5%; }
-            #Splash .splash_lessons ul li:hover .text p {
-              opacity: 0.90; }
-            #Splash .splash_lessons ul li:nth-of-type(4n + 1) .text {
-              color: #000; }
-              #Splash .splash_lessons ul li:nth-of-type(4n + 1) .text p {
-                background-color: #fff;
-                opacity: 1; }
+            #Splash .splash_lessons ul li:hover p {
+              opacity: 1; }
             #Splash .splash_lessons ul li img {
               width: 100%;
               height: 300px;
@@ -427,13 +430,6 @@ body > article {
               object-fit: cover;
               background-position: center;
               flex: 1; }
-            #Splash .splash_lessons ul li .text {
-              position: absolute;
-              height: 100%;
-              width: 100%;
-              transition: all 500ms;
-              padding: 30px;
-              color: #fff; }
             #Splash .splash_lessons ul li h3 {
               position: absolute;
               top: 9%;

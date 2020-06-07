@@ -50,7 +50,7 @@
                 @include align-items(center);
                 padding: 8% 0.5%;
                 @include phone{
-                        padding: 8% 1%;
+                        padding: 8% 0%;
                 }
         }
         @include phone{
@@ -63,8 +63,7 @@
         ~~~~~~~~~~~~~~~~~~~~~ */
         .splash_intro{
                 color:$white;
-                //@include background-image('/img/texture-crystals.png');
-                background-color:red;
+                @include background-image('/img/texture-crystals.png');
                 .video{
                         width:100%;
                         max-width:800px;
@@ -117,46 +116,37 @@
                         li{
                                 @include flexbox();
                                 position:relative; // needed to absolutely position texts boxes on hover
+                                background-color:$black;
+                                color:$white;
+                                &:nth-of-type(4n + 1){
+                                        color:$black;
+                                        background-color:$white;
+                                        p{ 
+                                                opacity:1;
+                                        }
+                                }
+                                p{
+                                        transition:opacity 0.5s ease;
+                                }
                         }
-                        .text{
-                                padding:6%;
-                        }
-                        h3{
-                                margin-bottom:3%;
-                        }
-
                         @include phone{
                                 @include flex-direction(column);
                                 @include flex-wrap(nowrap);
                                 li{
                                         @include flex-direction(column);
-                                        margin-bottom:1%;
                                         img{
                                                 height:100%;
                                                 width:100%;
                                         }
-                                        &:nth-of-type(4n + 1){
-                                                .text{
-                                                        background-color:$white;
-                                                        color:$black;
-                                                }
+                                        h3{
+                                                padding:30px 30px 10px;
                                         }
-                                        .text{
-                                                background-color:$black;
-                                                color:$white;
-                                                padding:30px;
+                                        p{
+                                                padding:0 30px 30px;
+                                                margin-bottom:0; //reset
                                         }
                                 }
                         }
-                        // figure out desktop phone targeting
-                        // @media (min-width:800px) and (max-width:1023px){
-                        //         li{
-                        //                 @include flex-direction(row);
-                        //                 img{
-                        //                         width:300px;
-                        //                 }
-                        //         }
-                        // }
                         @include tablet{
                                 @include flex-direction(row);
                                 @include flex-wrap(wrap);
@@ -168,20 +158,10 @@
                                         width:32.5%;
                                         margin:0 0.1% 0.5%;
                                         &:hover{
-                                               .text p{
-                                                        opacity:0.90;
+                                               p{
+                                                        opacity:1;
                                                 } 
-                                        }
-                                        // Cluster of 4, selecting first item
-                                        &:nth-of-type(4n + 1){
-                                                .text{
-                                                        color:$black;
-                                                        p{
-                                                                background-color:$white;
-                                                                opacity:1;      
-                                                        }
-                                                }
-                                        }
+                                        }                                       
                                         img{
                                                 width:100%;
                                                 height:300px;
@@ -190,14 +170,6 @@
                                                 object-fit: cover;
                                                 background-position: center;
                                                 flex:1;
-                                        }
-                                        .text{
-                                                position:absolute;  
-                                                height:100%;
-                                                width:100%;
-                                                transition:all 500ms;
-                                                padding:30px;
-                                                color:$white;
                                         }
                                         h3{
                                                 position:absolute;
