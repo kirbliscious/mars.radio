@@ -132,8 +132,12 @@
                         @include phone{
                                 @include flex-direction(column);
                                 @include flex-wrap(nowrap);
+                                padding:0 20px;
                                 li{
                                         @include flex-direction(column);
+                                        margin-bottom:20px;
+                                        padding:20px;
+                                        background-color:$black;
                                         img{
                                                 height:100%;
                                                 width:100%;

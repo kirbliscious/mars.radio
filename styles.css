@@ -377,12 +377,16 @@ body > article {
           -webkit-flex-wrap: nowrap;
           -moz-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+          flex-wrap: nowrap;
+          padding: 0 20px; }
           #Splash .splash_lessons ul li {
             -webkit-flex-direction: column;
             -moz-flex-direction: column;
             -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #000; }
             #Splash .splash_lessons ul li img {
               height: 100%;
               width: 100%; }
