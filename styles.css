@@ -293,13 +293,7 @@ body > article {
       overflow: hidden; } }
   #Splash .splash_intro {
     color: #fff;
-    background-image: url("/img/texture-crystals.png");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50% 50%; }
-    @media (max-width: 1023px) {
-      #Splash .splash_intro {
-        background-size: contain; } }
+    background-color: red; }
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
