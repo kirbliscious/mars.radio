@@ -10,10 +10,14 @@
         h1{
                 text-align: center;
                 max-width:800px;
-                font-size:230%;
-                line-height:130%;
+                font-size:40px;
+                line-height:50px;
                 max-width:1200px;
                 letter-spacing:0.03em;
+                @include phone{
+                        font-size:30px;
+                        line-height:42px;
+                }
         }
         h2{
                 max-width:1200px;
@@ -23,6 +27,9 @@
                 text-align:center;
                 padding-top:25px; //font fix
                 margin-bottom:8%;
+                @include phone{
+                        font-size:70px;
+                }
         }
         h3{
                 font-size:30px;
@@ -63,11 +70,11 @@
                 // (opt) Add box shadow
                 h1 span,
                 p span{
-                        background-color:rgba(0, 0, 0, 0.1);
-                        box-shadow:0 0 10px 10px $black; 
+                        background-color:rgba(0, 0, 0, 0.5);
+                        box-shadow:0 0 10px 10px rgba(0, 0, 0, 0.5); 
                 }
                 @include phone{
-                     h1 span,
+                        h1 span,
                         p span{
                                 background-color:$black;
                                 box-shadow:0 0 5px 5px $black; 
@@ -79,9 +86,17 @@
                 p{
                         text-align: center;
                         letter-spacing: 0.03em;
-                        @include tablet{
-                                max-width:800px;
+                }
+                @include tablet{
+                        h1{
+                                
                         }
+                        p{
+                                max-width:800px;
+                                font-size:28px;
+                                line-height: 40px;     
+                        }
+                        
                 }
         }
         .splash_lessons{
@@ -100,7 +115,7 @@
                                 position:relative; // needed to absolutely position texts boxes on hover
                         }
                         .text{
-                                padding:4%;
+                                padding:6%;
                         }
                         h3{
                                 margin-bottom:3%;
@@ -125,6 +140,7 @@
                                         .text{
                                                 background-color:$black;
                                                 color:$white;
+                                                padding:30px;
                                         }
                                 }
                         }
@@ -210,18 +226,24 @@
                                 font-size:28px;
                                 margin-bottom:6px;
                                 padding-left:20px;
-                                background-color:$white;
-                                padding:20px;
-                                &:before{
-                                        content:"•";
-                                        margin-left:-20px;
-                                }
                         }
+               }
+                p{
+                        text-align: center;
+                span{
+                        background-color:$white;
+                        padding:10px;
+                }
                }
         }
         .splash_becomeamartian{
                 @include background-image("/img/texture2.png");
-                h2 {line-height:200px;}
+                h2 { 
+                        font-size:150px;
+                        letter-spacing: 0.03em;
+                        text-align: justify;
+                        line-height:200px;
+                }
         }
          .splash-request-btn{
                 background-color:$pink;

@@ -10,6 +10,9 @@ html{
 }
 body > article{
         margin-top:$headerHeight;
+        @include phone{
+                margin-top:$shortHeaderHeight;
+        }
 }
 @import 'pages/splash.scss';
 @import 'pages/syllabus.scss';
