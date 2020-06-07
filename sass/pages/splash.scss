@@ -237,15 +237,10 @@
                 }
         }
         .splash_about{
+                @include background-image("/img/mars.jpg");
                 h2{
-                        color:$ltblue;
                 }
                 p{
-                        padding:20px;
-                        background-color:$black;
-                        color:$ltblue;
-                        font-size:20px;
-                        line-height: 38px;
                         width:600px;
                 }
                 

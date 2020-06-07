@@ -3,8 +3,8 @@
         top:0;
         @include flexbox();
         @include flex-direction(row);
-        @include justify-content(center);
-        @include align-items(center);
+        @include justify-content(space-around);
+        @include align-items(stretch);
         height:$headerHeight;
         background-color:$black;
         width:100%;
@@ -15,6 +15,7 @@
                 height:$shortHeaderHeight;
                 h1{
                         font-size:30px;
+                        line-height:$shortHeaderHeight;
                 }
         }
         
@@ -23,8 +24,22 @@
                 font-size:50px;
                 text-transform: uppercase;
                 margin:0;
-                margin-top:20px;
+                margin-top:10px;
                 color:$white;
+                line-height:$headerHeight;
+                color:$quartz;
+        }
+        nav{
+                @include flexbox();
+                @include flex-direction(row);
+                @include align-items(center);
+                a{
+                        white-space: nowrap;
+                        font-family: alphaHeadline;
+                        text-transform: uppercase;
+                        color:$quartz;
+                        padding:0 10px;
+                }
         }
         .hamburger{
                 display: none;
@@ -33,11 +48,7 @@
                 padding:20px 30px 20px 10px;
                 z-index: 1000;
         }
-        @include phone{
-                @include flexbox();
-                @include flex-direction(column);
-                @include justify-content(center);
-                height:$shortHeaderHeight;
+        @include tablet{
                 &.active{
                         color:$white;
                 }

@@ -10,8 +10,11 @@ html{
 }
 body > article{
         margin-top:$headerHeight;
-        @include phone{
+        @include tablet{
                 margin-top:$shortHeaderHeight;
+                .header{
+                        height:$shortHeaderHeight;
+                }
         }
 }
 @import 'pages/splash.scss';

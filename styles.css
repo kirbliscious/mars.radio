@@ -140,16 +140,16 @@ p, li {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   height: 100px;
   background-color: #000;
   width: 100%;
@@ -158,41 +158,49 @@ p, li {
   .header.shrink {
     height: 60px; }
     .header.shrink h1 {
-      font-size: 30px; }
+      font-size: 30px;
+      line-height: 60px; }
   .header h1 {
     font-family: data;
     font-size: 50px;
     text-transform: uppercase;
     margin: 0;
-    margin-top: 20px;
-    color: #fff; }
+    margin-top: 10px;
+    color: #fff;
+    line-height: 100px;
+    color: #C9C2F7; }
+  .header nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header nav a {
+      white-space: nowrap;
+      font-family: alphaHeadline;
+      text-transform: uppercase;
+      color: #C9C2F7;
+      padding: 0 10px; }
   .header .hamburger {
     display: none;
     font-size: 20px;
     color: #fff;
     padding: 20px 30px 20px 10px;
     z-index: 1000; }
-  @media (max-width: 1023px) {
-    .header {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      -ms-justify-content: center;
-      justify-content: center;
-      -ms-flex-pack: center;
-      height: 60px; }
-      .header.active {
-        color: #fff; }
-      .header h1 {
-        font-size: 40px; } }
+  @media (min-width: 1024px) {
+    .header.active {
+      color: #fff; }
+    .header h1 {
+      font-size: 40px; } }
 
 /* Pages */
 html {
@@ -200,9 +208,11 @@ html {
 
 body > article {
   margin-top: 100px; }
-  @media (max-width: 1023px) {
+  @media (min-width: 1024px) {
     body > article {
-      margin-top: 60px; } }
+      margin-top: 60px; }
+      body > article .header {
+        height: 60px; } }
 
 /* ~~~~~~~~~~~~~~~~~~~~
 * * * * * * * * * * * *
@@ -492,51 +502,171 @@ body > article {
     font-size: 60px; }
     #Splash .splash-request-btn:hover {
       background-color: #db5549; }
-  #Splash .splash_about h2 {
-    color: #71c8f0; }
-  #Splash .splash_about p {
-    padding: 20px;
-    background-color: #000;
-    color: #71c8f0;
-    font-size: 20px;
-    line-height: 38px;
-    width: 600px; }
+  #Splash .splash_about {
+    background-image: url("/img/mars.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_about {
+        background-size: contain; } }
+    #Splash .splash_about p {
+      width: 600px; }
 
-#Syllabus .calendar {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap; }
-  #Syllabus .calendar .calendar-week {
+#Syllabus {
+  background-color: #fff; }
+  #Syllabus .calendar {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-flex-wrap: nowrap;
     -moz-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
-#Syllabus .lesson {
-  height: 400px;
-  width: 20%;
-  position: relative; }
-  #Syllabus .lesson .hover-content {
-    opacity: 0; }
-  #Syllabus .lesson:hover .hover-content {
-    opacity: 1; }
+  #Syllabus .lesson:hover {
+    background-color: #C9C2F7;
+    cursor: pointer; }
+  @media (min-width: 1024px) {
+    #Syllabus .calendar-header,
+    #Syllabus .calendar-week {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+      #Syllabus .calendar-header span,
+      #Syllabus .calendar-header .lesson,
+      #Syllabus .calendar-week span,
+      #Syllabus .calendar-week .lesson {
+        -webkit-flex-basis: 20%;
+        -moz-flex-basis: 20%;
+        -ms-flex-basis: 20%;
+        flex-basis: 20%; }
+    #Syllabus .calendar-header {
+      text-align: center;
+      border-bottom: 1px solid #000; }
+      #Syllabus .calendar-header span {
+        padding: 10px 0; }
+    #Syllabus .lesson {
+      position: relative;
+      height: 400px;
+      padding: 2%;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000; }
+      #Syllabus .lesson header {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: space-between;
+        white-space: nowrap; }
+        #Syllabus .lesson header span,
+        #Syllabus .lesson header date {
+          font-family: alphaHeadline;
+          text-transform: uppercase;
+          font-size: 12px; }
+      #Syllabus .lesson h2 {
+        text-align: center;
+        margin: 10px 0; }
+      #Syllabus .lesson .lesson-image {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; }
+        #Syllabus .lesson .lesson-image img {
+          width: 100%; } }
+  @media (max-width: 1023px) {
+    #Syllabus .calendar-header {
+      display: none; }
+    #Syllabus .calendar-week {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    #Syllabus .lesson {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      height: 200px;
+      padding: 30px 0;
+      border-bottom: 1px solid #000; }
+      #Syllabus .lesson .lesson-image {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        width: 40%; }
+      #Syllabus .lesson img {
+        height: 100%;
+        width: auto; }
+      #Syllabus .lesson .lesson-text {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
 
 /*# sourceMappingURL=styles.css.map */

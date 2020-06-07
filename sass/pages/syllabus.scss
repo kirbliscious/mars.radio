@@ -1,63 +1,100 @@
 $outline:5px;
 $outlineinverse:-5px;
 #Syllabus{
+        background-color:$white;
         .calendar{
                 @include flexbox();
                 @include flex-direction(column);
                 @include flex-wrap(nowrap);
+        }
+        .lesson{
+                &:hover{
+                        background-color:$quartz;
+                        cursor:pointer;
+                }
+        }
+        
+        @include tablet(){
+                .calendar-header,
                 .calendar-week{
                         @include flexbox();
                         @include flex-direction(row);
                         @include flex-wrap(nowrap);
+                        span,
+                        .lesson{
+                                @include flex-basis(20%);
+                        }
+                }
+                .calendar-header{
+                        text-align: center;
+                        border-bottom:1px solid $black;
+                        span{
+                                padding:10px 0;
+                        }
+                }
+                .lesson{
+                        position:relative; // needed to absolutely position full frame link
+                        height:400px;
+                        padding:2%;
+                        border-left:2px solid $black;
+                        border-bottom:2px solid $black;
+                        header{
+                                @include flexbox();
+                                @include flex-direction(row);
+                                @include justify-content(space-between);
+                                white-space: nowrap;
+                                span,
+                                date{
+                                        font-family: alphaHeadline;
+                                        text-transform:uppercase;
+                                        @include small();
+                                }
+                        }
+                        h2{
+                                text-align:center;
+                                margin:10px 0;
+                        }
+                        .lesson-image{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                @include justify-content(center);
+                                position:absolute;
+                                top:0; left:0;
+                                height:100%; width:100%;
+                                img{
+                                        width:100%;
+                                }
+                        }
                 }
         }
-        .lesson{
-                height:400px;
-                width:20%;
-                position:relative;
-                .hover-content{
-                        opacity:0;
+        @include phone(){
+                .calendar-header{
+                        display: none;
                 }
-                &:hover{
-                        .hover-content{
-                                opacity:1;
+                .calendar-week{
+                        @include flexbox();
+                        @include flex-direction(column);
+                }
+                .lesson{
+                        @include flexbox();
+                        @include flex-direction(row);
+                        height:200px;
+                        padding:30px 0;
+                        border-bottom:1px solid $black;
+                        .lesson-image{
+                                @include flexbox();
+                                @include flex-direction(row);
+                                @include justify-content(center);
+                                width:40%;
+                        }
+                        img{
+                                height:100%;
+                                width:auto;
+                        }
+                        .lesson-text{
+                                @include flexbox();
+                                @include flex-direction(column);
                         }
                 }
         }
 }
-
- // .calendar-week{
-        //         &:nth-child(1){
-        //                 .lesson{
-        //                         &:first-child{
-        //                                 border:$outline solid $black;
-        //                         }
-        //                         &:not(:first-child){
-        //                                 border-top:$outline solid $black;
-        //                                 border-right:$outline solid $black;
-        //                                 border-bottom:$outline solid $black;
-
-        //                         }
-        //                         date{}
-        //                         h2{}
-        //                 }
-        //         }
-        //         &:not(:first-child){
-        //                 .lesson{
-        //                         &:first-child{
-        //                                 border-left:$outline solid $black;
-        //                                 border-bottom:$outline solid $black;
-        //                                 border-right:$outline solid $black;
-        //                         }
-        //                         &:not(:first-child){
-        //                                 border-right:$outline solid $black;
-        //                                 border-bottom:$outline solid $black;
-
-        //                         }
-        //                         date{}
-        //                         h2{}
-        //                 }
-
-        //         }
-                
-        // }
