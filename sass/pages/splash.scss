@@ -27,6 +27,7 @@
                 text-align:center;
                 padding-top:25px; //font fix
                 margin-bottom:8%;
+                line-height: 75px;
                 @include phone{
                         font-size:70px;
                 }
@@ -50,7 +51,7 @@
                 @include align-items(center);
                 padding: 8% 0.5%;
                 @include phone{
-                        padding: 8% 0%;
+                        padding: 8% 2%;
                 }
         }
         @include phone{
@@ -138,7 +139,6 @@
                         @include phone{
                                 @include flex-direction(column);
                                 @include flex-wrap(nowrap);
-                                padding:0 20px;
                                 li{
                                         @include flex-direction(column);
                                         margin-bottom:20px;
@@ -229,17 +229,28 @@
                         letter-spacing: 0.03em;
                         text-align: justify;
                         line-height:200px;
+                        text-shadow: 4px 4px $pink;
                 }
-        }
-         .splash-request-btn{
-                background-color:$pink;
-                transition:all 0.5s ease;
-                color:$white;
-                font-family:alphaHeadline;
-                font-size:60px;
+                .splash-request-btn{
+                        background-color:$white;
+                        transition:all 0.5s ease;
+                        color:$pink;
+                        font-family:alphaHeadline;
+                        font-size:60px;
+                        transition:all 0.5s ease;
 
-                &:hover{
-                        background-color: $sunset;
+                        &:hover{
+                                background-color: $black;
+                                color:$pink;
+                        }
+                }
+                 @include phone{
+                        h2{
+                                font-size:100px;
+                                line-height:130px;
+                                margin-bottom:20px;     
+                        }
+                        
                 }
         }
         .splash_about{
@@ -247,7 +258,8 @@
                 h2{
                 }
                 p{
-                        width:600px;
+                        max-width:600px;
+                        text-align:center;
                 }
                 
         }

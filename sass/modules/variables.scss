@@ -6,9 +6,6 @@ $shortHeaderHeight:60px;
                 background-size: cover;
                 background-attachment: fixed;
                 background-position: 50% 50%;
-                @include phone{
-                        background-size:contain;
-                }
 }
 // C O L O R S //
 $black: #000;

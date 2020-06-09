@@ -268,7 +268,8 @@ body > article {
     text-transform: uppercase;
     text-align: center;
     padding-top: 25px;
-    margin-bottom: 8%; }
+    margin-bottom: 8%;
+    line-height: 75px; }
     @media (max-width: 1023px) {
       #Splash h2 {
         font-size: 70px; } }
@@ -308,7 +309,7 @@ body > article {
     padding: 8% 0.5%; }
     @media (max-width: 1023px) {
       #Splash section {
-        padding: 8% 0%; } }
+        padding: 8% 2%; } }
   @media (max-width: 1023px) {
     #Splash {
       overflow: hidden; } }
@@ -318,9 +319,6 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
-    @media (max-width: 1023px) {
-      #Splash .splash_intro {
-        background-size: contain; } }
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
@@ -348,9 +346,6 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
-    @media (max-width: 1023px) {
-      #Splash .splash_lessons {
-        background-size: contain; } }
     #Splash .splash_lessons h2 {
       color: #fff;
       text-shadow: 7px 7px #000; }
@@ -399,8 +394,7 @@ body > article {
           -webkit-flex-wrap: nowrap;
           -moz-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-          padding: 0 20px; }
+          flex-wrap: nowrap; }
           #Splash .splash_lessons ul li {
             -webkit-flex-direction: column;
             -moz-flex-direction: column;
@@ -476,9 +470,6 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
-    @media (max-width: 1023px) {
-      #Splash .splash_faq {
-        background-size: contain; } }
     #Splash .splash_faq h2 {
       text-shadow: 7px 7px #fff; }
     #Splash .splash_faq ul {
@@ -498,32 +489,35 @@ body > article {
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
-    @media (max-width: 1023px) {
-      #Splash .splash_becomeamartian {
-        background-size: contain; } }
     #Splash .splash_becomeamartian h2 {
       font-size: 150px;
       letter-spacing: 0.03em;
       text-align: justify;
-      line-height: 200px; }
-  #Splash .splash-request-btn {
-    background-color: #e54ed0;
-    transition: all 0.5s ease;
-    color: #fff;
-    font-family: alphaHeadline;
-    font-size: 60px; }
-    #Splash .splash-request-btn:hover {
-      background-color: #db5549; }
+      line-height: 200px;
+      text-shadow: 4px 4px #e54ed0; }
+    #Splash .splash_becomeamartian .splash-request-btn {
+      background-color: #fff;
+      transition: all 0.5s ease;
+      color: #e54ed0;
+      font-family: alphaHeadline;
+      font-size: 60px;
+      transition: all 0.5s ease; }
+      #Splash .splash_becomeamartian .splash-request-btn:hover {
+        background-color: #000;
+        color: #e54ed0; }
+    @media (max-width: 1023px) {
+      #Splash .splash_becomeamartian h2 {
+        font-size: 100px;
+        line-height: 130px;
+        margin-bottom: 20px; } }
   #Splash .splash_about {
     background-image: url("/img/texture-mars.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%; }
-    @media (max-width: 1023px) {
-      #Splash .splash_about {
-        background-size: contain; } }
     #Splash .splash_about p {
-      width: 600px; }
+      max-width: 600px;
+      text-align: center; }
 
 #Syllabus {
   background-color: #fff; }
