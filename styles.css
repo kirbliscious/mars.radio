@@ -867,7 +867,7 @@ body > article {
         width: 40%; }
       #Syllabus .lesson img {
         max-height: 180px;
-        width: 100%; }
+        width: auto; }
       #Syllabus .lesson .lesson-text {
         display: -webkit-box;
         display: -moz-box;
