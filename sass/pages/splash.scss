@@ -253,6 +253,7 @@
         }
         .splash_becomeamartian{
                 @include background-image("/img/texture-neon.png");
+                height:70vh;
                 h2 { 
                         font-size:150px;
                         letter-spacing: 0.03em;
@@ -275,12 +276,13 @@
                 }
                 @include phone{
                         h2{
-                                font-size:100px;
-                                line-height:130px;
+                                font-size:80px;
+                                line-height:110px;
                                 margin-bottom:20px;     
                         }
                         .splash-request-btn{
                                 margin-top:30px;
+                                font-size:40px;
                         }
                         
                 }
