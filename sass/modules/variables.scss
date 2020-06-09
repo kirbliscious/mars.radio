@@ -7,6 +7,10 @@ $shortHeaderHeight:60px;
                 background-repeat: no-repeat;
                 background-position: center center; // centered vertically and horizontally at all times
                 background-size: cover;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')";
 }
 // C O L O R S //
 $black: #000;

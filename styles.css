@@ -435,7 +435,11 @@ body > article {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
@@ -469,7 +473,11 @@ body > article {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
     #Splash .splash_lessons h2 {
       color: #fff;
       text-shadow: 7px 7px #000; }
@@ -593,7 +601,11 @@ body > article {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
     #Splash .splash_faq h2 {
       text-shadow: 7px 7px #fff; }
     #Splash .splash_faq ul {
@@ -622,7 +634,11 @@ body > article {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
     #Splash .splash_becomeamartian h2 {
       font-size: 150px;
       letter-spacing: 0.03em;
@@ -658,7 +674,11 @@ body > article {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; }
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
     #Splash .splash_about p {
       max-width: 600px;
       text-align: center; }
