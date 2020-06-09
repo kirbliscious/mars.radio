@@ -73,7 +73,7 @@ $outlineinverse:-5px;
                         @include flexbox();
                         @include flex-direction(row);
                         height:200px;
-                        padding:30px 0;
+                        padding:0;
                         border-bottom:1px solid $black;
                         .lesson-image{
                                 @include flexbox();
@@ -88,7 +88,13 @@ $outlineinverse:-5px;
                         .lesson-text{
                                 @include flexbox();
                                 @include flex-direction(column);
-                                margin-left:40px;
+                                padding:30px;
+                                date{
+                                        margin-left:20px;
+                                }
+                                h2{
+                                        margin-top:10px;
+                                }
                         }
                 }
         }

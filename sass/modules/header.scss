@@ -5,11 +5,16 @@
         @include flex-direction(row);
         @include justify-content(space-around);
         @include align-items(stretch);
-        height:$headerHeight;
         background-color:$black;
         width:100%;
         z-index:1000;
         transition:all .5s ease;
+        @include phone{
+                height:$shortHeaderHeight;
+        }
+        @include tablet{
+                height:$headerHeight;
+        }
 
         &.shrink{
                 height:$shortHeaderHeight;
@@ -23,7 +28,12 @@
                 font-size:50px;
                 text-transform: uppercase;
                 margin:0;
-                line-height:$headerHeight;
+                @include phone{
+                        line-height: $shortHeaderHeight;
+                }
+                @include tablet{
+                        line-height: $headerHeight;
+                }
                 a{
                         color:$white;
                         font-family:data;

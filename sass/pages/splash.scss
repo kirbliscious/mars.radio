@@ -121,11 +121,11 @@
                                 &:nth-of-type(4n + 1){
                                         color:$black;
                                         background-color:$white;
-                                       background: #f475f4; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #f475f4 0%, #7db9e8 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #f475f4 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #f475f4 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f475f4', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                                        // background: #f475f4; /* Old browsers */
+                                        // background: -moz-linear-gradient(-45deg, #f475f4 0%, #7db9e8 100%); /* FF3.6-15 */
+                                        // background: -webkit-linear-gradient(-45deg, #f475f4 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+                                        // background: linear-gradient(135deg, #f475f4 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                                        // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f475f4', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
                                         p{ 
                                                 opacity:1;
                                                 background-color:transparent;
