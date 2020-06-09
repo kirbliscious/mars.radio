@@ -26,11 +26,14 @@
                 text-transform:uppercase;
                 text-align:center;
                 padding-top:25px; //font fix
-                margin-bottom:8%;
+                margin-bottom:20px;
                 line-height: 75px;
                 @include phone{
                         font-size:70px;
                 }
+        }
+        h2 span{
+                font-family:data;
         }
         h3{
                 font-size:30px;
@@ -41,7 +44,6 @@
                 font-size:20px;
                 line-height: 32px;
                 max-width:1200px;
-                margin-bottom:5%;
         }
         section{
                 @include flexbox();
@@ -50,6 +52,7 @@
                 @include justify-content(center);
                 @include align-items(center);
                 padding: 8% 0.5%;
+                min-height:100vh;
                 @include phone{
                         padding: 8% 2%;
                 }
@@ -90,6 +93,7 @@
                 p{
                         text-align: center;
                         letter-spacing: 0.03em;
+                        margin-bottom: 5%;
                 }
                 @include tablet{
                         h1{
@@ -210,17 +214,21 @@
                         margin:0 auto;
                         li{
                                 font-size:28px;
-                                margin-bottom:6px;
-                                padding-left:20px;
+                                margin-bottom:10px;
+                                padding:40px;
+                                background-color:$white;
+                                box-shadow:0 0 3px 1px rgba(0,0,0,.5);
+                                p{
+                                        font-size:16px;
+                                        &:first-child{
+                                                text-transform: uppercase;
+                                                border-bottom:2px solid $black;
+                                                margin-bottom: 10px;
+                                                display:inline-block;
+                                        }
+                                }
                         }
-               }
-                p{
-                        text-align: center;
-                span{
-                        background-color:$white;
-                        padding:10px;
                 }
-               }
         }
         .splash_becomeamartian{
                 @include background-image("/img/texture-neon.png");
@@ -232,25 +240,39 @@
                         text-shadow: 4px 4px $pink;
                 }
                 .splash-request-btn{
-                        background-color:$white;
+                        background-color:$black;
                         transition:all 0.5s ease;
-                        color:$pink;
+                        color:$white;
                         font-family:alphaHeadline;
                         font-size:60px;
                         transition:all 0.5s ease;
+                        box-shadow:0 0 11px 3px rgba(0,0,0,.5);
 
                         &:hover{
-                                background-color: $black;
                                 color:$pink;
                         }
                 }
-                 @include phone{
+                @include phone{
                         h2{
                                 font-size:100px;
                                 line-height:130px;
                                 margin-bottom:20px;     
                         }
+                        .splash-request-btn{{
+                                margin-top:30px;
+                        }
                         
+                }
+                @include tablet{
+                        h2{
+                                margin-left:100px;
+                        }
+                        span:first-child{
+                                margin-left:-100px;
+                        }
+                        span:last-child{
+                                margin-left:100px;
+                        }
                 }
         }
         .splash_about{
