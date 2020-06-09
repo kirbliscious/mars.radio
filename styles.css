@@ -158,7 +158,7 @@ p, li {
   .main_header.shrink {
     height: 60px; }
     .main_header.shrink h1 {
-      font-size: 40px;
+      font-size: 30px;
       line-height: 60px; }
     .main_header.shrink .main_nav li:last-child {
       background-color: #ff1769;
@@ -426,9 +426,10 @@ body > article {
   #Splash .splash_intro {
     color: #fff;
     background-image: url("/img/texture-crystals.png");
-    background-size: cover;
     background-attachment: fixed;
-    background-position: 50% 50%; }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
     #Splash .splash_intro .video {
       width: 100%;
       max-width: 800px; }
@@ -459,9 +460,10 @@ body > article {
         line-height: 40px; } }
   #Splash .splash_lessons {
     background-image: url("/img/texture-aluminum-foil.jpg");
-    background-size: cover;
     background-attachment: fixed;
-    background-position: 50% 50%; }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
     #Splash .splash_lessons h2 {
       color: #fff;
       text-shadow: 7px 7px #000; }
@@ -580,9 +582,10 @@ body > article {
               opacity: 0; } }
   #Splash .splash_faq {
     background-image: url("/img/texture-bubbles.jpg");
-    background-size: cover;
     background-attachment: fixed;
-    background-position: 50% 50%; }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
     #Splash .splash_faq h2 {
       text-shadow: 7px 7px #fff; }
     #Splash .splash_faq ul {
@@ -608,9 +611,10 @@ body > article {
         padding: 40px; } }
   #Splash .splash_becomeamartian {
     background-image: url("/img/texture-neon.png");
-    background-size: cover;
     background-attachment: fixed;
-    background-position: 50% 50%; }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
     #Splash .splash_becomeamartian h2 {
       font-size: 150px;
       letter-spacing: 0.03em;
@@ -643,9 +647,10 @@ body > article {
         margin-left: 100px; } }
   #Splash .splash_about {
     background-image: url("/img/texture-mars.jpg");
-    background-size: cover;
     background-attachment: fixed;
-    background-position: 50% 50%; }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
     #Splash .splash_about p {
       max-width: 600px;
       text-align: center; }

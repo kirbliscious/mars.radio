@@ -12,11 +12,13 @@ jQuery(document).ready(function( $ ) {
 
         // desktop nav collapse on scroll
         $(document).on("scroll", function() {
-                if ($(document).scrollTop() > 100) {
-                        $('.main_header').addClass('shrink');
-                        console.log("shrink");
-                } else {
-                $('.main_header').removeClass('shrink');
+                if( $(isMobile == false)){
+                        if ($(document).scrollTop() > 100) {
+                                $('.main_header').addClass('shrink');
+                                console.log("shrink");
+                        } else {
+                                $('.main_header').removeClass('shrink');
+                        }
                 }
         });
 
