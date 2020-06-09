@@ -10,18 +10,6 @@
         z-index:1000;
         transition:all 0.5s ease;
         height:$headerHeight;
-
-        &.shrink{
-                height:$shortHeaderHeight;
-                h1{
-                        font-size:30px;
-                        line-height:$shortHeaderHeight;
-                }
-                .main_nav li:last-child{
-                        background-color:$highlight;
-                        padding-left:20px;
-                }
-        }
         
         h1{
                 font-size:50px;
@@ -61,6 +49,17 @@
                 display: none;
         }
         @include tablet{
+                &.shrink{
+                        height:$shortHeaderHeight;
+                        h1{
+                                font-size:30px;
+                                line-height:$shortHeaderHeight;
+                        }
+                        .main_nav li:last-child{
+                                background-color:$highlight;
+                                padding-left:20px;
+                        }
+                }
                  ul{
                         width:100%;
                         height: 100%;

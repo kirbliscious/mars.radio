@@ -88,6 +88,7 @@ $outlineinverse:-5px;
                 .lesson{
                         @include flexbox();
                         @include flex-direction(row);
+                        @include align-items(center);
                         height:200px;
                         padding:0;
                         border-bottom:1px solid $black;
@@ -95,11 +96,13 @@ $outlineinverse:-5px;
                                 @include flexbox();
                                 @include flex-direction(row);
                                 @include justify-content(center);
+                                @include align-items(center);
+                                padding:0 20px;
                                 width:40%;
                         }
                         img{
-                                height:100%;
-                                width:auto;
+                                max-height:180px;
+                                width:100%;
                         }
                         .lesson-text{
                                 @include flexbox();
