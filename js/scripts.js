@@ -8,23 +8,24 @@ jQuery(document).ready(function( $ ) {
         }
 
         //fitvids
-        $('.video').fitVids({ });
+        $('.video').fitVids();
 
         // desktop nav collapse on scroll
-        $(window).scroll(function() {
-                if( $isMobile = false){
-                        if ($(document).scrollTop() > 50) {
-                                $('.header').addClass('shrink');
-                        } else {
-                        $('.header').removeClass('shrink');
+        $(document).on("scroll", function() {
+                if ($(document).scrollTop() > 100) {
+                        $('.main_header').addClass('shrink');
+                        console.log("shrink");
+                } else {
+                $('.main_header').removeClass('shrink');
                 }
-          }
         });
 
-        // HHHHHH-AAAAAAA-MMMMMMMM
+        
+
+        // HHHHHH-AAAAAAA-MMMMMMMM-BURGERia
         $('.hamburger').click(function(e) {
-                $('.main-navigation').slideToggle();
-                $('.main-navigation').toggleClass('active');
+                $('.main_nav').slideToggle();
+                $('.main_nav').toggleClass('active');
                 e.preventDefault();
         });
 });

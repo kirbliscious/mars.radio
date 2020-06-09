@@ -7,6 +7,9 @@ $outlineinverse:-5px;
                 @include flex-direction(column);
                 @include flex-wrap(nowrap);
         }
+        .calendar-header{
+                display: none;
+        }
         .lesson{
                 transition: all 0.5s ease;
                 &:hover{
@@ -21,6 +24,18 @@ $outlineinverse:-5px;
                         @include flexbox();
                         @include flex-direction(row);
                         @include flex-wrap(wrap);
+                }
+                .calendar-header{
+                        height:40px;
+                        width:100%;
+                        @include flexbox();
+                        @include flex-direction(row);
+                        @include align-items(center);
+                        border-bottom:1px solid $black;
+                        span{
+                                @include flex-basis(20%);
+                                text-align: center;
+                        }
                 }
                 .lesson{
                         @include flexbox();
@@ -55,6 +70,7 @@ $outlineinverse:-5px;
                                 position:absolute;
                                 top:0; left:0;
                                 height:100%; width:100%;
+                                padding-top:90px;
                                 img{
                                         width:100%;
                                 }
