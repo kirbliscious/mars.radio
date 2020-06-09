@@ -9,11 +9,14 @@ html{
         background-color:$black;
 }
 body > article{
-        margin-top:$headerHeight;
+        margin-top:$shortHeaderHeight;
+        .header{
+                height:$shortHeaderHeight;
+        }
         @include tablet{
-                margin-top:$shortHeaderHeight;
+                margin-top:$headerHeight;
                 .header{
-                        height:$shortHeaderHeight;
+                        height:$headerHeight;
                 }
         }
 }

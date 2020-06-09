@@ -103,7 +103,7 @@
                 }
         }
         .splash_lessons{
-                @include background-image("/img/aluminum_foil.jpg");
+                @include background-image("/img/texture-aluminum-foil.jpg");
                 h2{
                         color:$white;
                         text-shadow:7px 7px $black;
@@ -121,8 +121,14 @@
                                 &:nth-of-type(4n + 1){
                                         color:$black;
                                         background-color:$white;
+                                       background: #f475f4; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f475f4 0%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f475f4 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f475f4 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f475f4', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
                                         p{ 
                                                 opacity:1;
+                                                background-color:transparent;
                                         }
                                 }
                                 p{
@@ -217,7 +223,7 @@
                }
         }
         .splash_becomeamartian{
-                @include background-image("/img/texture2.png");
+                @include background-image("/img/texture-neon.png");
                 h2 { 
                         font-size:150px;
                         letter-spacing: 0.03em;
@@ -237,7 +243,7 @@
                 }
         }
         .splash_about{
-                @include background-image("/img/mars.jpg");
+                @include background-image("/img/texture-mars.jpg");
                 h2{
                 }
                 p{

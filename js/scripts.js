@@ -1,4 +1,5 @@
 jQuery(document).ready(function( $ ) { 
+        //Set isMobile variable for mobile interactions 
         //https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device
         var isMobile = false; //initiate as false
         // device detection
@@ -6,8 +7,10 @@ jQuery(document).ready(function( $ ) {
                 isMobile = true;
         }
 
+        //fitvids
         $('.video').fitVids({ });
 
+        // desktop nav collapse on scroll
         $(window).scroll(function() {
                 if( $isMobile = false){
                         if ($(document).scrollTop() > 50) {
@@ -18,6 +21,7 @@ jQuery(document).ready(function( $ ) {
           }
         });
 
+        // HHHHHH AAAAAAA MMMMMMMM
         $('.hamburger').click(function(e) {
                 $('.main-navigation').slideToggle();
                 $('.main-navigation').toggleClass('active');

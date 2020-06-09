@@ -20,14 +20,14 @@
         }
         
         h1{
-                font-family:data;
                 font-size:50px;
                 text-transform: uppercase;
                 margin:0;
-                margin-top:10px;
-                color:$white;
                 line-height:$headerHeight;
-                color:$quartz;
+                a{
+                        color:$white;
+                        font-family:data;
+                }
         }
         nav{
                 @include flexbox();
@@ -37,8 +37,13 @@
                         white-space: nowrap;
                         font-family: alphaHeadline;
                         text-transform: uppercase;
-                        color:$quartz;
+                        color:$white;
                         padding:0 10px;
+                        border-bottom:1px solid transparent;
+                        transition:all 0.5s ease;
+                        &:hover{
+                                border-bottom:1px solid $white;
+                        }
                 }
         }
         .hamburger{

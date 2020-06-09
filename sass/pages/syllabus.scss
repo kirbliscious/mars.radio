@@ -8,31 +8,25 @@ $outlineinverse:-5px;
                 @include flex-wrap(nowrap);
         }
         .lesson{
+                transition: all 0.5s ease;
                 &:hover{
-                        background-color:$quartz;
+                        //background-color:$quartz;
                         cursor:pointer;
                 }
+                color:$black;
         }
         
         @include tablet(){
-                .calendar-header,
-                .calendar-week{
+                .calendar{
                         @include flexbox();
                         @include flex-direction(row);
-                        @include flex-wrap(nowrap);
-                        span,
-                        .lesson{
-                                @include flex-basis(20%);
-                        }
-                }
-                .calendar-header{
-                        text-align: center;
-                        border-bottom:1px solid $black;
-                        span{
-                                padding:10px 0;
-                        }
+                        @include flex-wrap(wrap);
                 }
                 .lesson{
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include flex-basis(20%);
+                        width:20%;
                         position:relative; // needed to absolutely position full frame link
                         height:400px;
                         padding:2%;
@@ -94,6 +88,7 @@ $outlineinverse:-5px;
                         .lesson-text{
                                 @include flexbox();
                                 @include flex-direction(column);
+                                margin-left:40px;
                         }
                 }
         }
