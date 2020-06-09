@@ -54,7 +54,7 @@
                 padding: 8% 0.5%;
                 min-height:100vh;
                 @include phone{
-                        padding: 8% 2%;
+                        padding: 8% 30px;
                 }
         }
         @include phone{
@@ -94,6 +94,13 @@
                         text-align: center;
                         letter-spacing: 0.03em;
                         margin-bottom: 5%;
+                }
+                @include phone{
+                        h1 span,
+                        p span{
+                                background-color:rgba(0, 0, 0, 0.5);
+                                box-shadow:0 0 5px 5px rgba(0, 0, 0, 0.5); 
+                        }
                 }
                 @include tablet{
                         h1{
@@ -146,17 +153,17 @@
                                 li{
                                         @include flex-direction(column);
                                         margin-bottom:20px;
-                                        padding:20px;
+                                        padding:4%;
                                         background-color:$black;
                                         img{
                                                 height:100%;
                                                 width:100%;
                                         }
                                         h3{
-                                                padding:30px 30px 10px;
+                                               // padding:30px 30px 10px;
                                         }
                                         p{
-                                                padding:0 30px 30px;
+                                                //padding:0 30px 30px;
                                                 margin-bottom:0; //reset
                                         }
                                 }
@@ -215,7 +222,6 @@
                         li{
                                 font-size:28px;
                                 margin-bottom:10px;
-                                padding:40px;
                                 background-color:$white;
                                 box-shadow:0 0 3px 1px rgba(0,0,0,.5);
                                 p{
@@ -227,6 +233,16 @@
                                                 display:inline-block;
                                         }
                                 }
+                        }
+                }
+                @include phone{
+                        li {
+                                padding:4%;
+                        }
+                }
+                @include tablet{
+                        li{
+                                padding:40px;
                         }
                 }
         }

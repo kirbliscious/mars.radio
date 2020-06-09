@@ -248,7 +248,7 @@ p, li {
         .main_header .hamburger.active {
           color: #C9C2F7; }
       .main_header h1 {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 60px; }
       .main_header .main_nav {
         position: absolute;
@@ -419,7 +419,7 @@ body > article {
     min-height: 100vh; }
     @media (max-width: 1023px) {
       #Splash section {
-        padding: 8% 2%; } }
+        padding: 8% 30px; } }
   @media (max-width: 1023px) {
     #Splash {
       overflow: hidden; } }
@@ -447,6 +447,11 @@ body > article {
       text-align: center;
       letter-spacing: 0.03em;
       margin-bottom: 5%; }
+    @media (max-width: 1023px) {
+      #Splash .splash_intro h1 span,
+      #Splash .splash_intro p span {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); } }
     @media (min-width: 1024px) {
       #Splash .splash_intro p {
         max-width: 800px;
@@ -512,15 +517,12 @@ body > article {
             -ms-flex-direction: column;
             flex-direction: column;
             margin-bottom: 20px;
-            padding: 20px;
+            padding: 4%;
             background-color: #000; }
             #Splash .splash_lessons ul li img {
               height: 100%;
               width: 100%; }
-            #Splash .splash_lessons ul li h3 {
-              padding: 30px 30px 10px; }
             #Splash .splash_lessons ul li p {
-              padding: 0 30px 30px;
               margin-bottom: 0; } }
       @media (min-width: 1024px) {
         #Splash .splash_lessons ul {
@@ -589,7 +591,6 @@ body > article {
       #Splash .splash_faq ul li {
         font-size: 28px;
         margin-bottom: 10px;
-        padding: 40px;
         background-color: #fff;
         box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5); }
         #Splash .splash_faq ul li p {
@@ -599,6 +600,12 @@ body > article {
             border-bottom: 2px solid #000;
             margin-bottom: 10px;
             display: inline-block; }
+    @media (max-width: 1023px) {
+      #Splash .splash_faq li {
+        padding: 4%; } }
+    @media (min-width: 1024px) {
+      #Splash .splash_faq li {
+        padding: 40px; } }
   #Splash .splash_becomeamartian {
     background-image: url("/img/texture-neon.png");
     background-size: cover;
