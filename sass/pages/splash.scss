@@ -39,11 +39,17 @@
                 font-size:30px;
                 font-family:alphaHeadlineBold;
                 text-transform: uppercase;
+                @include phone{
+                        font-size:22px;
+                }
         }
         p{
                 font-size:20px;
                 line-height: 32px;
                 max-width:1200px;
+                @include phone{
+                        font-size:16px;
+                }
         }
         section{
                 @include flexbox();
@@ -54,7 +60,7 @@
                 padding: 8% 0.5%;
                 min-height:100vh;
                 @include phone{
-                        padding: 8% 30px;
+                        padding: 8% 20px;
                 }
         }
         @include phone{
@@ -153,17 +159,16 @@
                                 li{
                                         @include flex-direction(column);
                                         margin-bottom:20px;
-                                        padding:4%;
-                                        background-color:$black;
                                         img{
                                                 height:100%;
                                                 width:100%;
                                         }
                                         h3{
-                                               // padding:30px 30px 10px;
+                                               padding:30px 30px 5px;
+                                               margin:0;
                                         }
                                         p{
-                                                //padding:0 30px 30px;
+                                                padding:0 30px 30px;
                                                 margin-bottom:0; //reset
                                         }
                                 }
@@ -229,7 +234,7 @@
                                         &:first-child{
                                                 text-transform: uppercase;
                                                 border-bottom:2px solid $black;
-                                                margin-bottom: 10px;
+                                                margin-bottom: 5px;
                                                 display:inline-block;
                                         }
                                 }
@@ -237,7 +242,7 @@
                 }
                 @include phone{
                         li {
-                                padding:4%;
+                                padding:20px 30px;
                         }
                 }
                 @include tablet{
