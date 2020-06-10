@@ -159,6 +159,9 @@
                         @include phone{
                                 @include flex-direction(column);
                                 @include flex-wrap(nowrap);
+                                h2{
+                                        text-shadow:5px 5px $black;
+                                }
                                 li{
                                         @include flex-direction(column);
                                         margin-bottom:20px;
@@ -167,11 +170,11 @@
                                                 width:100%;
                                         }
                                         h3{
-                                               padding:15px 15px 5px;
+                                               padding:25px 25px 5px;
                                                margin:0;
                                         }
                                         p{
-                                                padding:0 15px 15px;
+                                                padding:0 25px 25px;
                                                 margin-bottom:0; //reset
                                         }
                                 }
@@ -223,6 +226,7 @@
                 @include background-image("/img/texture-bubbles.jpg");
                 h2{
                         text-shadow:7px 7px $white;
+                        color:$black;
                 }
                 ul{
                         max-width:1000px;
@@ -237,16 +241,16 @@
                                         line-height: 32px;
                                         &:first-child{
                                                 text-transform: uppercase;
-                                                border-bottom:2px solid $black;
                                                 margin-bottom: 10px;
                                                 display:inline-block;
+                                                color:$pink;
                                         }
                                 }
                         }
                 }
                 @include phone{
                         li {
-                                padding:15px 25px;
+                                padding:25px 25px;
                         }
                 }
                 @include tablet{

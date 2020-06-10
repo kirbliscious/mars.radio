@@ -527,6 +527,8 @@ body > article {
           -moz-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
+          #Splash .splash_lessons ul h2 {
+            text-shadow: 5px 5px #000; }
           #Splash .splash_lessons ul li {
             -webkit-flex-direction: column;
             -moz-flex-direction: column;
@@ -537,10 +539,10 @@ body > article {
               height: 100%;
               width: 100%; }
             #Splash .splash_lessons ul li h3 {
-              padding: 15px 15px 5px;
+              padding: 25px 25px 5px;
               margin: 0; }
             #Splash .splash_lessons ul li p {
-              padding: 0 15px 15px;
+              padding: 0 25px 25px;
               margin-bottom: 0; } }
       @media (min-width: 900px) {
         #Splash .splash_lessons ul {
@@ -606,7 +608,8 @@ body > article {
     -o-background-size: cover;
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
     #Splash .splash_faq h2 {
-      text-shadow: 7px 7px #fff; }
+      text-shadow: 7px 7px #fff;
+      color: #000; }
     #Splash .splash_faq ul {
       max-width: 1000px;
       margin: 0 auto; }
@@ -620,12 +623,12 @@ body > article {
           line-height: 32px; }
           #Splash .splash_faq ul li p:first-child {
             text-transform: uppercase;
-            border-bottom: 2px solid #000;
             margin-bottom: 10px;
-            display: inline-block; }
+            display: inline-block;
+            color: #e54ed0; }
     @media (max-width: 899px) {
       #Splash .splash_faq li {
-        padding: 15px 25px; } }
+        padding: 25px 25px; } }
     @media (min-width: 900px) {
       #Splash .splash_faq li {
         padding: 40px; } }
