@@ -3,7 +3,6 @@ $headerHeight:100px;
 $shortHeaderHeight:60px;
 @mixin background-image($url){
                 background-image: url($url);
-                background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-position: center center; // centered vertically and horizontally at all times
                 background-size: cover;

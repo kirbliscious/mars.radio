@@ -432,7 +432,6 @@ body > article {
   #Splash .splash_intro {
     color: #fff;
     background-image: url("/img/texture-crystals.png");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -469,7 +468,6 @@ body > article {
         line-height: 40px; } }
   #Splash .splash_lessons {
     background-image: url("/img/texture-aluminum-foil.jpg");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -597,7 +595,6 @@ body > article {
               opacity: 0; } }
   #Splash .splash_faq {
     background-image: url("/img/texture-bubbles.jpg");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -631,7 +628,6 @@ body > article {
         padding: 40px; } }
   #Splash .splash_becomeamartian {
     background-image: url("/img/texture-neon.png");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -702,7 +698,6 @@ body > article {
           margin-left: 500px; } }
   #Splash .splash_about {
     background-image: url("/img/texture-mars.jpg");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
