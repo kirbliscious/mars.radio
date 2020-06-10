@@ -194,7 +194,7 @@ p, li {
       letter-spacing: 0.02em; }
   .main_header .hamburger {
     display: none; }
-  @media (min-width: 1024px) {
+  @media (min-width: 900px) {
     .main_header.shrink {
       height: 60px; }
       .main_header.shrink h1 {
@@ -231,7 +231,7 @@ p, li {
       padding: 0 10px; }
       .main_header a:hover {
         color: #ff1769; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 899px) {
     .main_header {
       height: 60px; }
       .main_header .hamburger {
@@ -329,7 +329,7 @@ html {
 
 body > article {
   margin-top: 60px; }
-  @media (min-width: 1024px) {
+  @media (min-width: 900px) {
     body > article {
       margin-top: 100px; } }
 
@@ -363,9 +363,9 @@ body > article {
     max-width: 800px;
     font-size: 40px;
     line-height: 50px;
-    max-width: 1200px;
+    max-width: 900px;
     letter-spacing: 0.03em; }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash h1 {
         font-size: 30px;
         line-height: 42px; } }
@@ -378,7 +378,7 @@ body > article {
     padding-top: 25px;
     margin-bottom: 20px;
     line-height: 75px; }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash h2 {
         font-size: 70px; } }
   #Splash h2 span {
@@ -387,14 +387,14 @@ body > article {
     font-size: 30px;
     font-family: alphaHeadlineBold;
     text-transform: uppercase; }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash h3 {
         font-size: 22px; } }
   #Splash p {
     font-size: 20px;
     line-height: 32px;
-    max-width: 1200px; }
-    @media (max-width: 1023px) {
+    max-width: 900px; }
+    @media (max-width: 899px) {
       #Splash p {
         font-size: 16px; } }
   #Splash section {
@@ -423,10 +423,10 @@ body > article {
     align-items: center;
     padding: 8% 0.5%;
     min-height: 100vh; }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash section {
         padding: 8% 20px; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 899px) {
     #Splash {
       overflow: hidden; } }
   #Splash .splash_intro {
@@ -447,7 +447,7 @@ body > article {
     #Splash .splash_intro p span {
       background-color: rgba(0, 0, 0, 0.5);
       box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5); }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash .splash_intro h1 span,
       #Splash .splash_intro p span {
         background-color: #000;
@@ -458,14 +458,13 @@ body > article {
       text-align: center;
       letter-spacing: 0.03em;
       margin-bottom: 5%; }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash .splash_intro h1 span,
       #Splash .splash_intro p span {
         background-color: rgba(0, 0, 0, 0.5);
         box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5); } }
-    @media (min-width: 1024px) {
+    @media (min-width: 900px) {
       #Splash .splash_intro p {
-        max-width: 800px;
         font-size: 28px;
         line-height: 40px; } }
   #Splash .splash_lessons {
@@ -517,7 +516,7 @@ body > article {
             background-color: transparent; }
         #Splash .splash_lessons ul li p {
           transition: opacity 0.5s ease; }
-      @media (max-width: 1023px) {
+      @media (max-width: 899px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: column;
           -moz-flex-direction: column;
@@ -542,7 +541,7 @@ body > article {
             #Splash .splash_lessons ul li p {
               padding: 0 30px 30px;
               margin-bottom: 0; } }
-      @media (min-width: 1024px) {
+      @media (min-width: 900px) {
         #Splash .splash_lessons ul {
           -webkit-flex-direction: row;
           -moz-flex-direction: row;
@@ -617,16 +616,17 @@ body > article {
         background-color: #fff;
         box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5); }
         #Splash .splash_faq ul li p {
-          font-size: 16px; }
+          font-size: 19px;
+          line-height: 32px; }
           #Splash .splash_faq ul li p:first-child {
             text-transform: uppercase;
             border-bottom: 2px solid #000;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             display: inline-block; }
-    @media (max-width: 1023px) {
+    @media (max-width: 899px) {
       #Splash .splash_faq li {
         padding: 20px 30px; } }
-    @media (min-width: 1024px) {
+    @media (min-width: 900px) {
       #Splash .splash_faq li {
         padding: 40px; } }
   #Splash .splash_becomeamartian {
@@ -639,7 +639,7 @@ body > article {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')";
-    height: 70vh; }
+    min-height: 70vh; }
     #Splash .splash_becomeamartian h2 {
       font-size: 150px;
       letter-spacing: 0.03em;
@@ -653,24 +653,53 @@ body > article {
       font-family: alphaHeadline;
       font-size: 60px;
       transition: all 0.5s ease;
-      box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.5);
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; }
       #Splash .splash_becomeamartian .splash-request-btn:hover {
         color: #e54ed0; }
-    @media (max-width: 1023px) {
+      #Splash .splash_becomeamartian .splash-request-btn:nth-child(3) {
+        direction: rtl;
+        unicode-bidi: bidi-override; }
+      #Splash .splash_becomeamartian .splash-request-btn:nth-child(2) {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+        direction: rtl;
+        unicode-bidi: bidi-override; }
+    @media (max-width: 899px) {
       #Splash .splash_becomeamartian h2 {
         font-size: 80px;
         line-height: 110px;
-        margin-bottom: 20px; }
+        margin-bottom: 30px; }
       #Splash .splash_becomeamartian .splash-request-btn {
-        margin-top: 30px;
-        font-size: 40px; } }
-    @media (min-width: 1024px) {
+        font-size: 40px;
+        margin-bottom: 30px; } }
+    @media (min-width: 900px) {
       #Splash .splash_becomeamartian h2 {
         margin-left: 100px; }
       #Splash .splash_becomeamartian span:first-child {
         margin-left: -100px; }
       #Splash .splash_becomeamartian span:last-child {
-        margin-left: 100px; } }
+        margin-left: 100px; }
+      #Splash .splash_becomeamartian .splash-request-btn {
+        margin-bottom: 60px; }
+        #Splash .splash_becomeamartian .splash-request-btn:nth-child(2) {
+          margin-left: 100px; }
+        #Splash .splash_becomeamartian .splash-request-btn:nth-child(3) {
+          margin-left: 300px; }
+        #Splash .splash_becomeamartian .splash-request-btn:last-child {
+          margin-left: 500px; } }
   #Splash .splash_about {
     background-image: url("/img/texture-mars.jpg");
     background-attachment: fixed;
@@ -708,7 +737,7 @@ body > article {
     color: #000; }
     #Syllabus .lesson:hover {
       cursor: pointer; }
-  @media (min-width: 1024px) {
+  @media (min-width: 900px) {
     #Syllabus .calendar {
       display: -webkit-box;
       display: -moz-box;
@@ -814,7 +843,7 @@ body > article {
         padding-top: 90px; }
         #Syllabus .lesson .lesson-image img {
           width: 100%; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 899px) {
     #Syllabus .calendar-header {
       display: none; }
     #Syllabus .calendar-week {

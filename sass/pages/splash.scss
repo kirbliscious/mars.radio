@@ -12,7 +12,7 @@
                 max-width:800px;
                 font-size:40px;
                 line-height:50px;
-                max-width:1200px;
+                max-width:900px;
                 letter-spacing:0.03em;
                 @include phone{
                         font-size:30px;
@@ -46,7 +46,7 @@
         p{
                 font-size:20px;
                 line-height: 32px;
-                max-width:1200px;
+                max-width:900px;
                 @include phone{
                         font-size:16px;
                 }
@@ -113,7 +113,6 @@
                                 
                         }
                         p{
-                                max-width:800px;
                                 font-size:28px;
                                 line-height: 40px;     
                         }
@@ -230,11 +229,12 @@
                                 background-color:$white;
                                 box-shadow:0 0 3px 1px rgba(0,0,0,.5);
                                 p{
-                                        font-size:16px;
+                                        font-size:19px;
+                                        line-height: 32px;
                                         &:first-child{
                                                 text-transform: uppercase;
                                                 border-bottom:2px solid $black;
-                                                margin-bottom: 5px;
+                                                margin-bottom: 10px;
                                                 display:inline-block;
                                         }
                                 }
@@ -253,7 +253,7 @@
         }
         .splash_becomeamartian{
                 @include background-image("/img/texture-neon.png");
-                height:70vh;
+                min-height:70vh;
                 h2 { 
                         font-size:150px;
                         letter-spacing: 0.03em;
@@ -269,20 +269,38 @@
                         font-size:60px;
                         transition:all 0.5s ease;
                         box-shadow:0 0 11px 3px rgba(0,0,0,.5);
-
+                        @include flexbox();
+                        @include flex-direction(row);
                         &:hover{
                                 color:$pink;
+                        }
+                        &:nth-child(3){
+                                direction: rtl;
+                                unicode-bidi: bidi-override;
+                        }
+                         &:nth-child(2){
+                                -webkit-transform:rotate(-180deg);
+                                -moz-transform:rotate(-180deg);
+                                -o-transform:rotate(-180deg);
+                                transform:rotate(-180deg);
+                                ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+                                filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+                                direction: rtl;
+                                unicode-bidi: bidi-override; 
+                        }
+                        &:last-child{
+                                 
                         }
                 }
                 @include phone{
                         h2{
                                 font-size:80px;
                                 line-height:110px;
-                                margin-bottom:20px;     
+                                margin-bottom:30px;     
                         }
                         .splash-request-btn{
-                                margin-top:30px;
                                 font-size:40px;
+                                margin-bottom:30px;
                         }
                         
                 }
@@ -295,6 +313,18 @@
                         }
                         span:last-child{
                                 margin-left:100px;
+                        }
+                        .splash-request-btn{
+                                margin-bottom:60px;
+                                &:nth-child(2){
+                                        margin-left:100px;
+                                }
+                                 &:nth-child(3){
+                                        margin-left:300px;
+                                }
+                                &:last-child{
+                                        margin-left:500px;
+                                }
                         }
                 }
         }
