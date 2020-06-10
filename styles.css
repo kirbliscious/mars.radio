@@ -425,7 +425,7 @@ body > article {
     min-height: 100vh; }
     @media (max-width: 899px) {
       #Splash section {
-        padding: 8% 20px; }
+        padding: 8% 10px; }
         #Splash section.splash_lessons {
           background-repeat: repeat;
           background-size: auto; } }
@@ -537,10 +537,10 @@ body > article {
               height: 100%;
               width: 100%; }
             #Splash .splash_lessons ul li h3 {
-              padding: 30px 30px 5px;
+              padding: 15px 15px 5px;
               margin: 0; }
             #Splash .splash_lessons ul li p {
-              padding: 0 30px 30px;
+              padding: 0 15px 15px;
               margin-bottom: 0; } }
       @media (min-width: 900px) {
         #Splash .splash_lessons ul {
@@ -625,7 +625,7 @@ body > article {
             display: inline-block; }
     @media (max-width: 899px) {
       #Splash .splash_faq li {
-        padding: 20px 30px; } }
+        padding: 15px 25px; } }
     @media (min-width: 900px) {
       #Splash .splash_faq li {
         padding: 40px; } }
