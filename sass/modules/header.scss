@@ -4,7 +4,7 @@
         @include flexbox();
         @include flex-direction(row);
         @include justify-content(space-around);
-        @include align-items(stretch);
+        @include align-items(center);
         background-color:$black;
         width:100%;
         z-index:1000;
@@ -95,10 +95,9 @@
                 .hamburger{
                         display: block;
                         position:absolute;
-                        left:20px;
+                        right:10px;
                         font-size:30px;
                         color:$white;
-                        padding:5px 30px 20px 10px;
                         z-index: 1000;
                         transition: all 0.5s ease;
                         &:hover{
@@ -111,6 +110,7 @@
                 h1{
                         font-size: 30px;
                         line-height: $shortHeaderHeight;
+                        left:10px;
                 }
                 .main_nav{
                         position:absolute;
