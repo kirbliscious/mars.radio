@@ -61,6 +61,10 @@
                 min-height:100vh;
                 @include phone{
                         padding: 8% 20px;
+                        &.splash_lessons{
+                                background-repeat:repeat;
+                                background-size:auto;
+                        }
                 }
         }
         @include phone{
