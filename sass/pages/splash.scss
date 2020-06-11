@@ -223,43 +223,7 @@
                         }
                 }
         }
-        .splash_faq{
-                @include background-image("/img/texture-bubbles.jpg");
-                h2{
-                        text-shadow:7px 7px $white;
-                        color:$black;
-                }
-                ul{
-                        max-width:1000px;
-                        margin:0 auto;
-                        li{
-                                font-size:28px;
-                                margin-bottom:10px;
-                                background-color:$white;
-                                box-shadow:0 0 3px 1px rgba(0,0,0,.5);
-                                p{
-                                        font-size:19px;
-                                        line-height: 32px;
-                                        &:first-child{
-                                                text-transform: uppercase;
-                                                margin-bottom: 10px;
-                                                display:inline-block;
-                                                color:$pink;
-                                        }
-                                }
-                        }
-                }
-                @include phone{
-                        li {
-                                padding:25px 25px;
-                        }
-                }
-                @include tablet{
-                        li{
-                                padding:40px;
-                        }
-                }
-        }
+       
         .splash_becomeamartian{
                 @include background-image("/img/texture-neon.png");
                 min-height:70vh;

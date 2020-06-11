@@ -1,0 +1,50 @@
+#FAQ{
+        @include background-image("/img/texture-bubbles.jpg");
+        h2{
+                text-shadow:7px 7px $white;
+                color:$black;
+                max-width:1200px;
+                font-family: data;
+                font-size:80px;
+                text-transform:uppercase;
+                text-align:center;
+                padding-top:25px; //font fix
+                margin-bottom:20px;
+                line-height: 75px;
+                @include phone{
+                        font-size:70px;
+                }
+        }
+        ul{
+                max-width:1000px;
+                margin:0 auto;
+                li{
+                        font-size:28px;
+                        margin-bottom:10px;
+                        background-color:$white;
+                        box-shadow:0 0 3px 1px rgba(0,0,0,.2);
+                        p{
+                                font-size:19px;
+                                line-height: 32px;
+                                &:first-child{
+                                        text-transform: uppercase;
+                                        margin-bottom: 10px;
+                                        display:inline-block;
+                                        color:$pink;
+                                }
+                        }
+                }
+        }
+        @include phone{
+                padding:8% 10px;
+                li {
+                        padding:25px 25px;
+                }
+        }
+        @include tablet{
+                padding:8% 0.5%;
+                li{
+                        padding:40px;
+                }
+        }
+}
