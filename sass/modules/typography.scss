@@ -18,7 +18,18 @@ h2{}
 h3{}
 h4{}
 
-
+@mixin data-header{
+        font-family:data;
+        font-size:80px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top:25px;
+        line-height: 75px;
+        margin-bottom:25px;
+        @include phone{
+                font-size:70px;
+        }
+}
 @mixin small{
         font-size:12px;
 }
@@ -40,13 +51,14 @@ h3{
         margin-bottom:10px;
 }
 p{
-        //max-width:600px;
+        font-size:20px;
+        line-height: 32px;
+        max-width:900px;
+        @include phone{
+                font-size:16px;
+        }
 }
-p, li{
-        font-family:alphaHeadline;
-        font-size:18px;
-        line-height: 28px;
-}
+
 .btn{
         &:hover{
                 cursor:pointer;

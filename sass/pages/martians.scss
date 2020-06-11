@@ -1,0 +1,42 @@
+#Martians{
+        @include flexbox();
+        @include flex-direction(column);
+        @include background-image('/img/texture-nebula-2.jpg');
+        padding:30px;
+        h1{
+                @include data-header;
+        }
+        ul{
+                @include flexbox();
+                @include flex-wrap(wrap);
+                li{
+                        @include flexbox();
+                        @include flex-direction(column);
+                        width:33.33%;
+                        padding:0 0.5%;
+                        margin-bottom:5%;
+                        .text{
+                                @include flexbox();
+                                @include flex-direction(column);
+                                @include align-items(center);
+                                padding:20px;
+                                background-color:rgba(0,0,0,.6);
+                                color:$white;
+                                h2, 
+                                span{
+                                        text-align: center;
+                                }
+                        }
+                        h2{
+                                margin:15px 0 0 0;
+                                text-transform: uppercase;
+                        }
+                        span{
+                                margin-bottom:15px;
+                        }
+                        img{
+                                max-width:100%;
+                        }
+                }
+        }
+}

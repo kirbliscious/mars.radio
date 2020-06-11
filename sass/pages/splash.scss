@@ -21,16 +21,7 @@
         }
         h2{
                 max-width:1200px;
-                font-family: data;
-                font-size:80px;
-                text-transform:uppercase;
-                text-align:center;
-                padding-top:25px; //font fix
-                margin-bottom:20px;
-                line-height: 75px;
-                @include phone{
-                        font-size:70px;
-                }
+                @include data-header;
         }
         h2 span{
                 font-family:data;
@@ -41,14 +32,6 @@
                 text-transform: uppercase;
                 @include phone{
                         font-size:22px;
-                }
-        }
-        p{
-                font-size:20px;
-                line-height: 32px;
-                max-width:900px;
-                @include phone{
-                        font-size:16px;
                 }
         }
         section{
