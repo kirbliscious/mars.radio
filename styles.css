@@ -202,7 +202,14 @@ p, li {
         line-height: 60px; }
       .main_header.shrink .main_nav li:last-child {
         background-color: #ff1769;
-        padding-left: 20px; }
+        padding-left: 20px;
+        transition: all 0.5s ease; }
+        .main_header.shrink .main_nav li:last-child a {
+          transition: all 0.5s ease; }
+        .main_header.shrink .main_nav li:last-child:hover {
+          background-color: #ff4a8a; }
+          .main_header.shrink .main_nav li:last-child:hover a {
+            color: #fff; }
     .main_header nav {
       height: 100%; }
     .main_header h1 {
@@ -908,7 +915,6 @@ body > article {
   #FAQ h2 {
     text-shadow: 7px 7px #fff;
     color: #000;
-    max-width: 1200px;
     font-family: data;
     font-size: 80px;
     text-transform: uppercase;
