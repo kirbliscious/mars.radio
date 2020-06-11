@@ -9,12 +9,11 @@
         ul{
                 @include flexbox();
                 @include flex-wrap(wrap);
-                li{
+                li{ 
                         @include flexbox();
                         @include flex-direction(column);
-                        width:33.33%;
+                        margin-bottom:5%; 
                         padding:0 0.5%;
-                        margin-bottom:5%;
                         .text{
                                 @include flexbox();
                                 @include flex-direction(column);
@@ -22,6 +21,7 @@
                                 padding:20px;
                                 background-color:rgba(0,0,0,.6);
                                 color:$white;
+                                height:100%;
                                 h2, 
                                 span{
                                         text-align: center;
@@ -37,6 +37,19 @@
                         img{
                                 max-width:100%;
                         }
+                }
+        }
+        @include tablet{
+                li{
+                       
+                        width:33.33%;
+                }
+                
+        }
+        @include phone{
+                li{
+                        // @include flexbox();
+                        // @include flex-direction(row);
                 }
         }
 }

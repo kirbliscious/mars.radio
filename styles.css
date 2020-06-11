@@ -998,9 +998,8 @@ body > article {
       -moz-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      width: 33.33%;
-      padding: 0 0.5%;
-      margin-bottom: 5%; }
+      margin-bottom: 5%;
+      padding: 0 0.5%; }
       #Martians ul li .text {
         display: -webkit-box;
         display: -moz-box;
@@ -1018,7 +1017,8 @@ body > article {
         align-items: center;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.6);
-        color: #fff; }
+        color: #fff;
+        height: 100%; }
         #Martians ul li .text h2,
         #Martians ul li .text span {
           text-align: center; }
@@ -1029,5 +1029,8 @@ body > article {
         margin-bottom: 15px; }
       #Martians ul li img {
         max-width: 100%; }
+  @media (min-width: 900px) {
+    #Martians li {
+      width: 33.33%; } }
 
 /*# sourceMappingURL=styles.css.map */
