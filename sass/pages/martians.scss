@@ -2,7 +2,7 @@
         @include flexbox();
         @include flex-direction(column);
         @include background-image('/img/texture-nebula-2.jpg');
-        padding:30px;
+        padding:8% 0.5%;
         h1{
                 @include data-header;
         }

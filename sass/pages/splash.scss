@@ -74,13 +74,6 @@
                         background-color:rgba(0, 0, 0, 0.5);
                         box-shadow:0 0 10px 10px rgba(0, 0, 0, 0.5); 
                 }
-                @include phone{
-                        h1 span,
-                        p span{
-                                background-color:$black;
-                                box-shadow:0 0 5px 5px $black; 
-                        }   
-                }
                 h1,p{
                         padding:0 5%;
                 }
@@ -88,6 +81,7 @@
                         text-align: center;
                         letter-spacing: 0.03em;
                         margin-bottom: 5%;
+                        @include p-large();
                 }
                 @include phone{
                         h1 span,
@@ -95,16 +89,6 @@
                                 background-color:rgba(0, 0, 0, 0.5);
                                 box-shadow:0 0 5px 5px rgba(0, 0, 0, 0.5); 
                         }
-                }
-                @include tablet{
-                        h1{
-                                
-                        }
-                        p{
-                                font-size:28px;
-                                line-height: 40px;     
-                        }
-                        
                 }
         }
         .splash_lessons{
@@ -123,6 +107,7 @@
                                 position:relative; // needed to absolutely position texts boxes on hover
                                 background-color:$black;
                                 color:$white;
+                                overflow:hidden;
                                 &:nth-of-type(4n + 1){
                                         color:$black;
                                         background-color:$white;
@@ -289,8 +274,9 @@
                 h2{
                 }
                 p{
-                        max-width:600px;
+                        max-width:800px;
                         text-align:center;
+                        @include p-large();
                 }
                 
         }

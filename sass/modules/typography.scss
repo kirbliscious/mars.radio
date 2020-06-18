@@ -33,6 +33,15 @@ h4{}
 @mixin small{
         font-size:12px;
 }
+@mixin p-large{
+        font-size:28px;
+        line-height: 40px;
+        letter-spacing: .03em;
+        @include phone{
+                font-size:16px;
+                line-height: 30px;
+        }
+}
 h1{
         font-family:alphaHeadline;
         font-size:32px;
@@ -56,6 +65,7 @@ p{
         max-width:900px;
         @include phone{
                 font-size:16px;
+                line-height: 30px;
         }
 }
 

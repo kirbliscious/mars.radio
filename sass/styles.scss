@@ -9,10 +9,7 @@ html{
         background-color:$black;
 }
 body > article{
-        margin-top:$shortHeaderHeight;
-        @include tablet{
-                margin-top:$headerHeight;
-        }
+        margin-top:$headerHeight;
 }
 @import 'pages/splash.scss';
 @import 'pages/syllabus.scss';

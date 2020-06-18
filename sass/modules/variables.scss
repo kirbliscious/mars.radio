@@ -1,6 +1,5 @@
 // V A R I A B L E S // 
-$headerHeight:100px;
-$shortHeaderHeight:60px;
+$headerHeight:60px;
 @mixin background-image($url){
                 background-image: url($url);
                 background-repeat: no-repeat;

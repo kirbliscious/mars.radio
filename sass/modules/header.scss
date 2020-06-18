@@ -12,12 +12,13 @@
         height:$headerHeight;
         
         h1{
-                font-size:50px;
+                font-size: 30px;
                 line-height: $headerHeight;
                 text-transform: uppercase;
                 margin:0;
                 position:absolute;
                 letter-spacing: 0.03em;
+                padding-top:13px;
                 a{
                         transition:all 0.5s ease;
                         color:$white;
@@ -49,34 +50,13 @@
                 display: none;
         }
         @include tablet{
-                &.shrink{
-                        height:$shortHeaderHeight;
-                        h1{
-                                font-size:30px;
-                                line-height:$shortHeaderHeight;
-                        }
-                        .main_nav li:last-child{
-                                background-color:$highlight;
-                                padding-left:20px;
-                                transition:all 0.5s ease;
-                                a{
-                                        transition:all 0.5s ease;
-                                }
-                                &:hover{
-                                        background-color:lighten($highlight, 10%);
-                                        a{
-                                                color:$white;
-                                        }
-                                }
-                        }
-                }
                 nav{
                         height:100%;
                 }
                 h1{
                         left:20px;
                 }
-                 ul{
+                ul{
                         width:100%;
                         height: 100%;
                         display:block;
@@ -86,30 +66,21 @@
                                 @include flexbox();
                                 @include align-items(center);
                                 height:100%;
-                                // select first two list items
-                                &:nth-child(-n+2){
-                                        float:left;
-                                        padding-left:20px;
-                                }
-                                //select last list item
-                                &:nth-child(n+3){
-                                        float:right;
-                                        padding-right:20px;
-                                        li{
-                                                padding-right:20px;
-                                        }
-                                }
+                                padding-right:20px;
                         }
                 }
                 a{
-                        padding:0 10px;
+                        height:100%;
+                        @include flexbox();
+                        @include align-items(center);
+                        height: 100%;
                         &:hover{
                                 color:$highlight;
                         }
                 }
         }
         @include phone{
-                height:$shortHeaderHeight;
+                height:$headerHeight;
                 .hamburger{
                         display: block;
                         position:absolute;
@@ -126,13 +97,11 @@
                         }
                 }
                 h1{
-                        font-size: 30px;
-                        line-height: $shortHeaderHeight;
                         left:10px;
                 }
                 .main_nav{
                         position:absolute;
-                        top:$shortHeaderHeight;
+                        top:$headerHeight;
                         left:0;
                         width:100%;
                         height:calc(100vh - 80px);
