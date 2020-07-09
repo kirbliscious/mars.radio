@@ -2,6 +2,7 @@ $outline:5px;
 $outlineinverse:-5px;
 #Syllabus{
         background-color:$white;
+        height:100%;
         .calendar{
                 @include flexbox();
                 @include flex-direction(column);
@@ -24,6 +25,7 @@ $outlineinverse:-5px;
                         @include flexbox();
                         @include flex-direction(row);
                         @include flex-wrap(wrap);
+                        height:calc(100% - 40px); // subtract calendar header height
                 }
                 .calendar-header{
                         height:40px;
@@ -47,6 +49,7 @@ $outlineinverse:-5px;
                         padding:2%;
                         border-left:2px solid $black;
                         border-bottom:2px solid $black;
+                        height:50%;
                         header{
                                 @include flexbox();
                                 @include flex-direction(row);
@@ -62,6 +65,14 @@ $outlineinverse:-5px;
                         h2{
                                 text-align:center;
                                 margin:10px 0;
+                        }
+                        .lesson-class_link{
+                                position:absolute;
+                                width:100%;
+                                height:100%;
+                                top:0;
+                                left:0;
+                                z-index:100;
                         }
                         .lesson-image{
                                 @include flexbox();

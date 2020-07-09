@@ -30,4 +30,9 @@ jQuery(document).ready(function( $ ) {
                 $('.main_nav').toggleClass('active');
                 e.preventDefault();
         });
+
+        // Form ish
+        $(".menu-activator").on("click", function() {
+                $("body").toggleClass("menu-active");
+        });
 });
