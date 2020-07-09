@@ -38,7 +38,12 @@ jQuery(document).ready(function( $ ) {
 
         // Add active class to nav
         // https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/
-        $(function() {
-                $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        jQuery(function($) {
+         var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+         $('ul a').each(function() {
+          if (this.href === path) {
+           $(this).addClass('active');
+          }
+         });
         });
 });
