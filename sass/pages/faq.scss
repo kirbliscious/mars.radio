@@ -1,5 +1,7 @@
 #FAQ{
         @include background-image("/img/texture-plasticbag-blue.jpg");
+        @include flexbox();
+        @include flex-direction(column);
         h2{
                 text-shadow:7px 7px $white;
                 color:$black;
@@ -46,6 +48,10 @@
                                 }
                         }
                 }
+        }
+        .btn{
+                display:inline-block;
+                margin:80px auto;
         }
         @include phone{
                 padding:8% 10px;

@@ -205,62 +205,9 @@
                 p{
                         @include p-large();
                         padding-left:200px;
-                        margin-bottom:80px;
                 }
-                .splash-request-btn{
-                        background-color:$black;
-                        transition:all 0.5s ease;
-                        color:$white;
-                        font-family:alphaHeadline;
-                        font-size:60px;
-                        transition:all 0.5s ease;
-                        box-shadow:0 0 11px 3px rgba(0,0,0,.5);
-                        @include flexbox();
-                        @include flex-direction(row);
-                        &:hover{
-                                color:$pink;
-                        }
-                        // &:nth-child(3){
-                        //         direction: rtl;
-                        //         unicode-bidi: bidi-override;
-                        // }
-                        //  &:nth-child(2){
-                        //         -webkit-transform:rotate(-180deg);
-                        //         -moz-transform:rotate(-180deg);
-                        //         -o-transform:rotate(-180deg);
-                        //         transform:rotate(-180deg);
-                        //         ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-                        //         filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-                        //         direction: rtl;
-                        //         unicode-bidi: bidi-override; 
-                        // }
-                        // &:last-child{
-                                 
-                        // }
-                }
-                @include phone{
-                        h2{
-                                font-size:70px;
-                                line-height:100px;
-                                margin-bottom:30px;     
-                        }
-                        .splash-request-btn{
-                                font-size:40px;
-                                margin-bottom:30px;
-                        }
-                        
-                }
-                @include tablet{
-                        span:first-child{
-                                margin-left:0;
-                        }
-                        span{
-                                margin-left:100px;
-                        }
-                        span:last-child{
-                                margin-left:200px;
-                        }
-                        .splash-request-btn{
+                .splash_becomeamartian_btn{
+                        @include tablet{
                                 margin-bottom:60px;
                                 margin-left:500px;
                         }
