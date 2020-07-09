@@ -31,8 +31,14 @@ jQuery(document).ready(function( $ ) {
                 e.preventDefault();
         });
 
-        // Form ish
+        // Form FUNctionality
         $(".menu-activator").on("click", function() {
                 $("body").toggleClass("menu-active");
+        });
+
+        // Add active class to nav
+        // https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/
+        $(function() {
+                $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
         });
 });
