@@ -37,7 +37,7 @@ jQuery(document).ready(function( $ ) {
         });
 
         // Add active class to nav
-        // https://css-tricks.com/snippets/jquery/add-active-navigation-class-based-on-url/
+        // http://www.sweet-web-design.com/wordpress/how-to-add-active-navigation-class-based-on-url-to-menu-item/2401/
         jQuery(function($) {
          var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
          $('ul a').each(function() {
