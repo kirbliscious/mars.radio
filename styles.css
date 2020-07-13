@@ -457,7 +457,7 @@ body > article {
       overflow: hidden; } }
   #Splash .splash_intro {
     color: #fff;
-    background-image: url("/img/texture-crystals.png");
+    background-image: url("/img/texture-crystals.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -622,7 +622,7 @@ body > article {
               padding: 20% 9%;
               opacity: 0; } }
   #Splash .splash_becomeamartian {
-    background-image: url("/img/texture-neon.png");
+    background-image: url("/img/texture-neon.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
