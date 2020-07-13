@@ -13,7 +13,7 @@ html, body{
          overflow-y:scroll;
 }
 body > article{
-        padding-top:$headerHeight;
+       margin-top:$headerHeight;
 }
 @import 'pages/splash.scss';
 @import 'pages/syllabus.scss';

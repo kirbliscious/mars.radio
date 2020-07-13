@@ -103,7 +103,8 @@ h3 {
 p {
   font-size: 20px;
   line-height: 32px;
-  max-width: 900px; }
+  max-width: 900px;
+  hyphens: none; }
   @media (max-width: 899px) {
     p {
       font-size: 16px;
@@ -365,7 +366,7 @@ html, body {
   overflow-y: scroll; }
 
 body > article {
-  padding-top: 60px; }
+  margin-top: 60px; }
 
 /* ~~~~~~~~~~~~~~~~~~~~
 * * * * * * * * * * * *
@@ -927,8 +928,7 @@ body > article {
         font-size: 70px; } }
   #FAQ ul {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px; }
+    margin: 0 auto; }
     #FAQ ul li {
       font-size: 28px;
       margin-bottom: 10px;
@@ -964,6 +964,8 @@ body > article {
   @media (min-width: 900px) {
     #FAQ {
       padding: 8% 0.5%; }
+      #FAQ ul {
+        padding: 0 40px; }
       #FAQ li {
         padding: 40px; } }
 
@@ -984,8 +986,7 @@ body > article {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')";
-  padding: 8% 0.5%; }
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')"; }
   #Martians h1 {
     font-family: data;
     font-size: 80px;
@@ -1049,8 +1050,13 @@ body > article {
       #Martians ul li img {
         max-width: 100%; }
   @media (min-width: 900px) {
-    #Martians li {
-      width: 33.33%; } }
+    #Martians {
+      padding: 8% 0.5%; }
+      #Martians li {
+        width: 33.33%; } }
+  @media (max-width: 899px) {
+    #Martians {
+      padding: 8% 10px; } }
 
 #Class {
   background-color: #fff; }

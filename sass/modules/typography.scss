@@ -64,6 +64,7 @@ p{
         font-size:20px;
         line-height: 32px;
         max-width:900px;
+        hyphens:none;
         @include phone{
                 font-size:16px;
                 line-height: 30px;
