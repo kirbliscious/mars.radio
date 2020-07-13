@@ -778,11 +778,11 @@ body > article {
         -moz-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-justify-content: space-between;
-        -moz-justify-content: space-between;
-        -ms-justify-content: space-between;
-        justify-content: space-between;
-        -ms-flex-pack: space-between;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
         white-space: nowrap; }
         #Syllabus .lesson header span,
         #Syllabus .lesson header date {
