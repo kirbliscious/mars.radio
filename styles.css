@@ -1058,8 +1058,12 @@ body > article {
     #Martians {
       padding: 8% 10px; } }
 
-#Class {
-  background-color: #fff; }
+@media (min-width: 900px) {
+  #Class {
+    padding: 8% 0.5%; } }
+@media (max-width: 899px) {
+  #Class {
+    padding: 8% 10px; } }
 
 #Form {
   display: -webkit-box;
