@@ -1,0 +1,150 @@
+@include font-face(ssSocialCircle, "/fonts/SS-Social-Circle/ss-social-circle", regular, null, eot ttf svg);
+@include font-face(ssSocial, "/fonts/SS-Social/ss-social-regular", regular, null, eot ttf svg);
+@include font-face(ssBlock, "/fonts/SS-Block/ss-block", regular, null, eot ttf svg);
+@include font-face(sourceSansProLight, "/fonts/Source-Sans-Pro/source-sans-pro-light", light, null, eot woff2 woff ttf svg);
+@include font-face(sourceSansProBold, "/fonts/Source-Sans-Pro/source-sans-pro-bold", light, null, eot woff2 woff ttf svg);
+@include font-face(sourceSansProReg, "/fonts/Source-Sans-Pro/source-sans-pro-regular", regular, null, eot woff2 woff ttf svg);
+@include font-face(alphaHeadline, "/fonts/AlphaHeadline/alpha-headline-regular", regular, null, eot woff2 woff ttf svg);
+@include font-face(alphaHeadlineBold, "/fonts/AlphaHeadline/alpha-headline-bold", regular, null, eot woff2 woff ttf svg);
+@include font-face(data, "/fonts/data_70", regular, null, ttf svg);
+
+*{}
+a{}
+p{}
+small{}
+strong{}
+h1{}
+h2{}
+h3{}
+h4{}
+
+@mixin data-header{
+        font-family:data;
+        font-size:80px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top:25px;
+        line-height: 75px;
+        margin-bottom:25px;
+        @include phone{
+                font-size:70px;
+        }
+}
+@mixin small{
+        font-size:12px;
+}
+@mixin p-large{
+        margin-bottom:20px;
+        @include tablet{
+                letter-spacing: .03em;
+                font-size:28px;
+                line-height: 40px;
+        }
+        @include phone{
+                font-size:18px;
+                line-height: 30px;
+        }
+}
+@mixin p-reg{
+        font-size:20px;
+        line-height: 32px;
+        max-width:900px;
+        hyphens:none;
+        @include phone{
+                font-size:16px;
+                line-height: 30px;
+        }
+}
+
+@mixin text_block{
+        max-width:960px;
+}
+
+.strong{
+        font-family:sourceSansProBold;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+}
+h1{
+        font-family:alphaHeadline;
+        font-size:32px;
+        margin-bottom: 20px;
+        line-height:50px;
+}
+h2{
+        font-family:alphaHeadline;
+        font-size:24px;
+        line-height: 40px;
+        margin-bottom:15px;
+        @include big-desktop{
+                margin-bottom:25px;
+        }
+}
+h3{
+        font-family:alphaHeadline;
+        font-size:20px;
+        margin-bottom:10px;
+}
+p{
+        font-size:20px;
+        line-height: 32px;
+        max-width:900px;
+        hyphens:none;
+        @include phone{
+                font-size:16px;
+                line-height: 30px;
+        }
+        @include big-desktop{
+                font-size:24px;
+                line-height: 47px;
+        }
+}
+a:hover{
+        color:$highlight;
+}
+
+.btn{
+        transition:all 0.5s ease;
+        font-family:alphaHeadline;
+        &:hover{
+                cursor:pointer;
+        }
+}
+.btn-large{
+        text-transform: uppercase;
+        letter-spacing:0.02em;
+        border-radius:3px;
+        @include tablet{
+                font-size:60px;
+                padding:15px 30px;
+                margin:80px 0;
+        }
+        @include phone{
+                font-size:40px;
+                line-height:100px;
+                margin:30px 0; 
+                padding:5px 15px; 
+                line-height:60px;
+        }
+}
+.btn-black{
+        background-color:$black;        
+        color:$white;
+        &:hover{
+                color:$pink;
+        }
+}
+
+*{
+        font-family:sourceSansProReg;
+}
+.icon-social{
+        font-family:ssSocial;
+}
+.icon-circle{
+        font-family:ssSocialCircle;
+}
+.icon{
+        font-family:ssBlock;
+}

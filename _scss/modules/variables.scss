@@ -1,0 +1,44 @@
+// V A R I A B L E S // 
+$headerHeight:60px;
+@mixin background-image($url){
+                background-image: url($url);
+                background-repeat: no-repeat;
+                background-position: center center; // centered vertically and horizontally at all times
+                background-size: cover;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/post_bg.jpg',    sizingMethod='scale')";
+}
+
+@mixin page_padding(){
+        @include tablet{
+                padding:8% 0.5%;
+        }
+        @include phone{
+                padding:8% 10px;
+        }
+}
+
+@mixin text_element_padding(){
+        padding: 0 10%;
+}
+// C O L O R S //
+$black: #000;
+$white: #fff;
+
+$sunset: #db5549;
+$red: #d60200;
+$brick: #ba0200;
+$burgundy: #8d021f;
+
+$beige: #ffd2ad;
+$beige: #fff1e6;
+
+$pink: #e54ed0;
+
+$ltblue:#71c8f0;
+
+$quartz:#C9C2F7;
+
+$highlight: #ff1769;

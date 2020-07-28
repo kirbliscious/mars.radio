@@ -1,0 +1,95 @@
+#Class{
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        padding-bottom:600px;
+        >header{
+                width:100%;
+                margin-bottom:40px;
+                h1{
+                        background-color:yellow;
+                        letter-spacing: .1em;
+                        text-transform: uppercase;
+                        @include text_element_padding();
+                        text-align: center;
+                        margin-bottom:0; //default reset
+                }
+        }
+        .video{
+                max-width: 1200px;
+                margin:0 auto 40px;
+                width:100%;
+        }
+        li{
+                font-size:20px;
+                line-height: 32px;
+                max-width:900px;
+                hyphens:none;
+                @include phone{
+                        font-size:16px;
+                        line-height: 30px;
+                }
+
+        }
+        p,li{
+                margin-bottom:10px;
+        }
+        .class-ascent_checklist,
+        .class-links,
+        .class-mission,
+        .class-transmission{
+                width:100%;
+                @include big-desktop{
+                        max-width:1200px !important;
+                }
+                @include tablet{
+                        margin-bottom:40px;
+                        padding:0 100px;
+                        max-width:960px;
+                }
+                @include phone{
+                        margin-bottom:20px;
+                        padding:0 40px;
+                }
+                h2{
+                        text-transform: uppercase;
+                        font-size:16px;
+                        border-bottom: 1px dotted $black;
+                        letter-spacing: 0.02em;
+                        margin-bottom:20px;
+                        @include phone{
+                                font-size:14px;
+                                line-height: 30px;
+                        }
+                        @include big-desktop{
+                                font-size:18px;
+                        }
+                }
+                p{
+                        margin-bottom:10px;
+                }
+        }
+        .class-mission{
+               li{
+                        margin-bottom:20px;
+               }
+        }
+        ul{
+                margin-bottom:20px;
+                li p{
+                        display:inline;
+                }
+                li::before{
+                        content: attr(data-icon);
+                        font-size:22px;
+                        padding-right:10px;
+                }
+        }
+        a{
+                color:$highlight;
+                transition:0.5s ease;
+                &:hover{
+                        background-color:yellow;
+                }
+        }
+}
